@@ -1,0 +1,773 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#dceef4">
+  <meta name="description" content="Un pequeño jardín de calma hecho con cariño para Noe. Respira con un osito, abre cartas y encuentra un ratito de tranquilidad.">
+  <title>Un pedacito de calma para Noe 🌷</title>
+  <style>
+:root{--ink:#2e4839;--muted:#65806b;--paper:#fffdf7;--cream:#f9f8f0;--sage:#e6f0df;--green:#46725a;--deep:#315c46;--mint:#deeee0;--rose:#f4d3ce;--lilac:#dedaf1;--shadow:0 16px 40px rgba(40,79,58,.08);--soft-shadow:0 8px 28px rgba(40,79,58,.06)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:30px}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',system-ui,-apple-system,Arial,sans-serif;font-size:15px;line-height:1.65;-webkit-font-smoothing:antialiased}body.modal-open{overflow:hidden}button,textarea{font:inherit}button{cursor:pointer}a{color:inherit;text-decoration:none}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #c18e4a;outline-offset:4px}.hidden{display:none!important}.wrap{width:min(1060px,calc(100% - 40px));margin:auto}.skip-link{position:absolute;z-index:999;top:-100px;left:20px;background:white;padding:12px 18px;border-radius:12px}.skip-link:focus{top:10px}.eyebrow,.section-kicker,.modal-tag{font-size:11px;font-weight:800;letter-spacing:.2em;color:#67907a}.sparkle-symbol{color:#d1a55d;font-size:18px;vertical-align:middle;margin-right:8px}.section h2,.closing h2{font-family:'DM Serif Display',Georgia,serif;font-weight:400;letter-spacing:-.027em}.section h2 em,.hero h1 em,.closing h2 em{font-weight:400;color:#789b79}.button{display:inline-flex;align-items:center;justify-content:center;gap:11px;min-height:49px;padding:11px 19px;font-size:13px;font-weight:800;line-height:1.3;border-radius:999px;transition:transform .2s ease,background .2s ease,box-shadow .2s ease}.button:hover,.letter-tile:hover{transform:translateY(-3px)}.button-primary{background:#416e56;color:white;box-shadow:0 6px 18px rgba(52,106,72,.14)}.button-primary:hover{background:#2c5d42}.button-outline{background:#fffdf9;color:#416e56;border:1px solid #cbdccb}.button-quiet{background:transparent;color:#64806c;padding:8px 11px;min-height:45px}.inline-action{display:inline-flex;align-items:center;gap:9px;border:0;background:transparent;color:#407453;font-weight:800;padding:12px 0;font-size:13px}.inline-action:hover{text-decoration:underline}.header{height:88px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:4}.brand{display:flex;align-items:center;gap:9px;font-family:'DM Serif Display',Georgia,serif;font-size:23px;line-height:.92;color:#345d4c}.brand small{display:block;font-family:'DM Sans',sans-serif;font-size:9px;letter-spacing:.13em;text-transform:uppercase;font-weight:800;color:#789382;margin-top:7px}.brand-bloom{font-family:Georgia,serif;font-size:36px;color:#e9ac9d;line-height:1}.header-controls{display:flex;align-items:center;gap:9px}.round-control,.sound-toggle{background:rgba(255,255,255,.75);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.9);box-shadow:0 5px 20px rgba(79,111,86,.08);height:43px;color:#446853;border-radius:999px}.round-control{width:43px;font-size:20px;display:grid;place-items:center}.sound-toggle{padding:0 16px;display:flex;gap:8px;align-items:center;font-size:12px;font-weight:800}.sound-toggle>span:first-child{font-size:16px}.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#dbedf4 0%,#e8f3ef 45%,#f7f8ed 93%)}.hero-light{pointer-events:none;position:absolute;width:650px;height:650px;right:-220px;top:-220px;border-radius:50%;background:radial-gradient(circle,#fff9edbe 0%,#fffef700 68%)}.hero-intro{text-align:center;position:relative;z-index:3;padding:33px 0 0}.hero h1{max-width:800px;margin:14px auto 15px;font-family:'DM Serif Display',Georgia,serif;line-height:1.06;letter-spacing:-.035em;font-size:clamp(43px,6.4vw,76px);font-weight:400;color:#274d3b}.hero-subtitle{max-width:650px;margin:0 auto;color:#577867;font-size:clamp(14px,1.6vw,16px);line-height:1.85}.hero-subtitle strong{color:#42674c}.hero-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:21px 0 0}.hero-pills>span{background:#ffffffa3;padding:7px 13px;border-radius:999px;border:1px solid #fffef3bf;color:#618474;font-size:11px;font-weight:800}.meadow-shell{position:relative;margin:25px auto 0}.meadow-stage{width:min(1160px,calc(100% - 18px));height:510px;margin:auto;border-radius:35px;position:relative;isolation:isolate;overflow:hidden;box-shadow:0 24px 58px rgba(56,103,70,.13);background:#c1e7e3}.landscape{display:block;width:100%;height:100%;position:absolute;inset:0}.sun{transition:fill .9s ease}.cloud{animation:cloudDrift 18s ease-in-out infinite;transform-origin:center}.cloud-b{animation-delay:-7s;animation-duration:22s}.cloud-c{animation-delay:-13s;animation-duration:15s}.butterfly{position:absolute;font-size:28px;z-index:5;animation:butterflyFloat 7s ease-in-out infinite;filter:drop-shadow(0 4px 3px #34563613);pointer-events:none}.butterfly-one{top:23%;left:24%}.butterfly-two{top:35%;right:20%;font-size:23px;animation-delay:-3.3s}.teddy-area{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:280px;height:370px;z-index:7;display:grid;place-items:end center;pointer-events:none}.bear-button{display:block;width:250px;height:260px;padding:0;margin:0 0 4px;border:0;background:transparent;position:relative;pointer-events:auto;transition:transform .25s}.bear-button:hover{transform:translateY(-5px)}.bear-button:active{transform:scale(.97)}.bear-art{display:block;width:100%;height:100%;filter:drop-shadow(0 11px 6px rgba(45,75,39,.17))}.bear-torso{transform-origin:145px 188px}.bear-belly{transform-origin:146px 210px}.is-breathing .bear-torso{animation:breatheBody 10s ease-in-out infinite}.is-breathing .bear-belly{animation:breatheBelly 10s ease-in-out infinite}.breath-halo{position:absolute;width:240px;height:240px;border-radius:50%;left:50%;top:30%;transform:translate(-50%,-50%);border:1px solid #fffaef92;box-shadow:0 0 0 24px #fffdf629,0 0 0 52px #fffdf511;opacity:.5}.is-breathing .breath-halo{animation:haloBreath 10s ease-in-out infinite}.hug-message{max-width:265px;min-height:32px;background:#fffdf7ed;backdrop-filter:blur(8px);padding:6px 10px;text-align:center;font-size:11px;border:1px solid #ffffff8a;border-radius:999px;color:#4b7655;font-weight:700;z-index:3;line-height:1.45;pointer-events:none;box-shadow:0 4px 12px #284f3b17}.meadow-flower{position:absolute;z-index:6;display:grid;place-items:center;width:65px;height:65px;border:0;background:transparent;font-size:41px;filter:drop-shadow(0 6px 5px rgba(57,92,56,.13));animation:flowerSway 4s ease-in-out infinite;transition:transform .2s}.meadow-flower:hover,.meadow-flower:focus-visible{transform:scale(1.3)}.flower-1{left:11%;bottom:16%;font-size:49px}.flower-2{left:25%;bottom:8%;font-size:42px;animation-delay:-1s}.flower-3{right:10%;bottom:16%;font-size:45px;animation-delay:-2.3s}.flower-4{right:24%;bottom:7%;font-size:40px;animation-delay:-.7s}.flower-5{right:40%;bottom:3%;font-size:36px;animation-delay:-1.7s}.meadow-instruction{position:absolute;z-index:9;right:20px;bottom:14px;padding:8px 14px;background:#f7fbf1d9;border:1px solid #ffffffbe;border-radius:999px;color:#44714b;font-size:11px;font-weight:800;box-shadow:var(--soft-shadow)}.night-stars{display:none;position:absolute;top:12%;width:100%;text-align:center;font-size:18px;color:#fffae9;z-index:1;letter-spacing:18px}.float-heart{position:absolute;pointer-events:none;z-index:20;font-size:22px;animation:floatHeart 1.2s ease-out forwards}.breath-dock{position:relative;z-index:4;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:92px;padding:15px 19px;background:#fffefa;margin-top:-1px;border-radius:0 0 27px 27px;box-shadow:0 18px 38px rgba(51,91,59,.05)}.breath-text{display:flex;align-items:center;gap:15px}.dock-icon{width:46px;height:46px;display:grid;place-items:center;font-size:25px;border-radius:17px;background:#edf4e6}.breath-text strong{display:block;color:#385f47;font-size:14px}.breath-text small{display:block;font-size:11px;color:#819480;max-width:480px;line-height:1.55}.hero-end{display:flex;justify-content:space-between;align-items:center;padding:24px 0 50px;font-size:12px;font-weight:700;color:#79907f}.hero-end p{margin:0}.hero-end a{color:#467656}.hero-end a:hover{text-decoration:underline}.section{padding:92px 0}.section-header{max-width:730px;margin-bottom:30px}.section-header.centered{text-align:center;margin:0 auto 36px}.section h2{font-size:clamp(38px,4.4vw,58px);line-height:1.1;margin:12px 0 16px}.section-header p{margin:0;color:#7a8f7e;font-size:14px;line-height:1.9}.letter-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}.letter-tile{position:relative;min-height:159px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px 10px 16px;background:#fffdf9;border:1px solid #f1f0e4;border-radius:21px;box-shadow:var(--soft-shadow);text-align:center;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease;overflow:hidden}.letter-tile:hover{box-shadow:0 14px 30px rgba(83,116,73,.11);border-color:#d7e4d5}.letter-tile::before{content:"";position:absolute;top:-30px;left:-30px;height:80px;width:80px;border-radius:50%;background:var(--tile-color,#eff1df);opacity:.52}.letter-tile .tile-icon{font-size:42px;line-height:1;margin-bottom:14px;filter:drop-shadow(0 5px 3px rgba(49,74,50,.08));transition:transform .2s}.letter-tile:hover .tile-icon{transform:rotate(-7deg) scale(1.15)}.letter-tile .tile-label{font-size:12px;font-weight:800;line-height:1.32;color:#45634a;max-width:125px}.letter-tile .tile-action{font-size:10px;font-weight:800;margin-top:10px;color:#9cae9b;letter-spacing:.05em}.under-grid{display:flex;gap:18px;justify-content:center;align-items:center;margin-top:24px}.under-grid span{font-size:12px;color:#92a593}.section-wave{height:35px;background:linear-gradient(180deg,#f9f8f0 0%,#eff5ed 100%)}.section-care{background:#eff5ed;padding-top:87px;padding-bottom:93px}.care-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.care-panel{padding:29px;border-radius:27px;background:#fffefa;box-shadow:var(--soft-shadow);border:1px solid #ffffffa3}.care-icon{font-size:30px}.care-panel h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.15;font-size:29px;margin:10px 0 9px;letter-spacing:-.025em}.care-panel>p{font-size:13px;color:#849586;line-height:1.8;margin:0 0 20px}.mood-options{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:18px}.mood-chip{font-size:12px;background:#f5f8f1;color:#607860;border:1px solid #e2ecdf;border-radius:999px;padding:10px 12px;font-weight:800}.mood-chip.selected{background:#4a7557;color:white;border-color:#4a7557}.mood-note{padding:21px 19px;background:linear-gradient(145deg,#fff7e9,#fffaf5);border:1px solid #f7eddb;border-radius:20px;min-height:174px}.mood-note>span{font-size:10px;font-weight:800;letter-spacing:.15em;color:#b99a76}.mood-note p{color:#5a6955;font-family:'DM Serif Display',Georgia,serif;font-size:19px;line-height:1.48;margin:10px 0 0}.ground-card{display:flex;align-items:center;gap:17px;background:#f4f8f0;border:1px solid #edf1e8;border-radius:18px;padding:17px 18px;min-height:108px}.ground-number{display:grid;place-items:center;flex:0 0 64px;height:64px;border-radius:20px;color:#476953;background:#e0eee0;font-family:'DM Serif Display',Georgia,serif;font-size:42px;line-height:1}.ground-card strong{color:#42634b;font-size:15px}.ground-card p{font-size:12px;color:#7b907d;line-height:1.7;margin:5px 0 0}.ground-progress{display:flex;gap:5px;margin:18px 0;flex-wrap:wrap}.ground-progress>span{height:6px;flex:1 0 4px;border-radius:99px;background:#e1e9de}.ground-progress>span.done{background:#78b489}.ground-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}.garden-panel{display:grid;grid-template-columns:1fr 1fr;align-items:center;overflow:hidden;border-radius:32px;background:#f0ecdf;min-height:380px;box-shadow:var(--soft-shadow)}.garden-copy{padding:52px 58px}.garden-copy h2{margin:12px 0 15px;font-size:clamp(36px,4vw,52px)}.garden-copy>p:not(.garden-message){font-size:14px;color:#7e8a77;max-width:380px;line-height:1.9;margin-bottom:26px}.garden-copy .inline-action{margin-left:18px}.garden-message{font-family:'DM Serif Display',Georgia,serif;font-size:17px;color:#507858;margin-top:13px}.garden-drawing{position:relative;height:100%;min-height:390px;overflow:hidden;background:radial-gradient(circle at 70% 29%,#fff8d9 0%,transparent 22%),linear-gradient(180deg,#d9ebda,#e8edd5 68%,#d9dfb9)}.garden-sun{position:absolute;top:43px;right:55px;color:#eac97f;font-size:45px;filter:blur(.2px)}.garden-soil{position:absolute;bottom:-120px;left:-30%;width:160%;height:190px;background:#91b27a;border-radius:50%}.growing-plant{position:absolute;bottom:58px;left:50%;transform:translateX(-50%);height:225px;width:170px}.growing-plant .stem{position:absolute;bottom:0;left:calc(50% - 5px);height:5px;width:10px;background:#62946b;border-radius:12px;transition:height .7s ease}.growing-plant .leaf{position:absolute;bottom:52px;width:0;height:0;background:#75af77;border-radius:0 90% 0 90%;opacity:0;transition:width .6s,height .6s,opacity .6s;transform-origin:bottom center}.growing-plant .leaf-left{left:28%;transform:rotate(23deg)}.growing-plant .leaf-right{left:50%;bottom:89px;transform:rotate(-24deg) scaleX(-1)}.growing-plant .bloom{position:absolute;bottom:147px;left:calc(50% - 54px);width:108px;height:108px;display:grid;place-items:center;opacity:0;transform:scale(.3) rotate(-18deg);transition:transform .8s cubic-bezier(.2,1.5,.6,1),opacity .8s}.growing-plant .bloom span{display:block;font-size:110px;line-height:1;color:#ec9fa4;text-shadow:0 5px 0 #e8b4a047}.growing-plant[data-level="1"] .stem{height:53px}.growing-plant[data-level="2"] .stem{height:100px}.growing-plant[data-level="3"] .stem{height:145px}.growing-plant[data-level="4"] .stem{height:162px}.growing-plant[data-level="2"] .leaf-left,.growing-plant[data-level="3"] .leaf-left,.growing-plant[data-level="4"] .leaf-left{height:41px;width:52px;opacity:1}.growing-plant[data-level="3"] .leaf-right,.growing-plant[data-level="4"] .leaf-right{height:39px;width:52px;opacity:1}.growing-plant[data-level="4"] .bloom{opacity:1;transform:scale(1) rotate(0)}.garden-drop{position:absolute;color:#fffdf0;font-size:22px;animation:twinkle 3.5s infinite}.garden-drop.one{top:35%;left:23%}.garden-drop.two{top:19%;right:21%;animation-delay:-1.5s}.garden-drop.three{bottom:20%;right:24%;animation-delay:-2.7s}.journal-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:start}.journal-intro{padding-top:20px}.journal-intro h2{font-size:clamp(36px,4vw,50px);margin:12px 0 18px}.journal-intro p{color:#7b8c7c;font-size:14px;line-height:1.9}.privacy-caption{font-size:12px;color:#658773;margin-top:32px;background:#eaf3e9;border-radius:15px;padding:15px;line-height:1.7}.journal-box{background:#fffefa;border:1px solid #f2efe3;padding:28px;border-radius:25px;box-shadow:var(--soft-shadow)}.journal-box label{display:block;margin-bottom:12px;font-weight:800;font-size:13px}.journal-box textarea{border:1px solid #e8e9da;background:#fdfdf9;border-radius:16px;min-height:155px;width:100%;resize:vertical;padding:17px;color:#385640;line-height:1.7;outline:none;font-size:13px}.journal-box textarea:focus{border-color:#92b59a;box-shadow:0 0 0 3px #dcefe0}.journal-controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}.small-status{font-size:11px;color:#94a397;margin:13px 0 0}.saved-notes{display:grid;gap:9px;margin-top:16px}.saved-note{padding:12px 13px;border-radius:12px;background:#f2f6ef;border:1px solid #e5eee0;display:flex;justify-content:space-between;gap:14px;align-items:flex-start;font-size:12px;white-space:pre-wrap;word-break:break-word}.saved-note button{white-space:nowrap;border:0;border-radius:999px;background:#fff;color:#67806c;padding:8px 11px;font-size:11px;font-weight:800}.closing{text-align:center;padding:15px 0 68px;max-width:630px}.closing-icon{font-size:40px}.closing h2{font-size:clamp(33px,4vw,47px);margin:11px 0 14px}.closing>p{font-size:14px;color:#7b8e7a;line-height:1.9}.closing .signature{color:#738d72;margin-top:20px;font-size:13px}.signature span{font-family:'DM Serif Display',Georgia,serif;font-size:20px;color:#547b5d;margin-left:6px}.footer{text-align:center;padding:16px;color:#a2af9f;font-size:11px;border-top:1px solid #e8ecdf}.letter-modal{position:fixed;inset:0;display:grid;place-items:center;z-index:60;padding:16px}.modal-scrim{position:absolute;inset:0;background:rgba(29,56,39,.67);backdrop-filter:blur(6px)}.modal-card{position:relative;width:min(550px,100%);max-height:calc(100dvh - 35px);overflow:auto;background:#fffdf7;border-radius:27px;text-align:center;padding:46px 44px 27px;box-shadow:0 26px 80px rgba(21,47,32,.29);animation:showModal .28s ease}.modal-card::before{content:"";position:absolute;top:-60px;left:50%;transform:translateX(-50%);height:150px;width:250px;background:#f3f0df;border-radius:50%;opacity:.5;pointer-events:none}.modal-close{position:absolute;right:17px;top:14px;display:grid;place-items:center;background:#f4f2e9;width:38px;height:38px;border-radius:50%;font-size:27px;color:#526f5b}.modal-icon{font-size:62px;position:relative;z-index:1;margin-bottom:8px}.modal-card h2{font-family:'DM Serif Display',Georgia,serif;font-size:36px;font-weight:400;margin:10px 0 18px;line-height:1.15;color:#315341}.modal-card>p{font-family:'DM Serif Display',Georgia,serif;font-size:19px;color:#657664;line-height:1.75;margin:0 auto 25px;max-width:430px;white-space:pre-line}.modal-bottom{border-top:1px solid #eff0e6;padding-top:16px;display:flex;justify-content:space-between;gap:10px;align-items:center}.modal-bottom span{font-size:11px;color:#9caa97;font-weight:700}.toast{position:fixed;bottom:max(22px,env(safe-area-inset-bottom));left:50%;transform:translate(-50%,24px);z-index:90;background:#2e5941;color:#fff;padding:12px 17px;opacity:0;pointer-events:none;border-radius:999px;font-size:12px;font-weight:700;box-shadow:0 12px 30px #24412b40;transition:transform .25s,opacity .25s;text-align:center;max-width:calc(100% - 30px)}.toast.show{transform:translate(-50%,0);opacity:1}body.sunset .hero{background:linear-gradient(180deg,#d6bfd3,#f4e1d3 55%,#f7f1e8 100%)}body.sunset .landscape>rect:first-of-type{fill:#c9b7d3}body.sunset .landscape .sun{fill:#ffd0a2}body.sunset .night-stars{display:block}body.sunset .cloud{opacity:.45}body.sunset .hero h1{color:#493d50}body.sunset .hero h1 em{color:#987486}body.sunset .hero-subtitle{color:#665b6f}body.sunset .breath-dock{background:#fff8f5}body.sunset .meadow-stage{background:#dfbad0}
+@keyframes cloudDrift{0%,100%{transform:translateX(0)}50%{transform:translateX(38px)}}@keyframes butterflyFloat{0%,100%{transform:translate(0,0) rotate(-12deg)}25%{transform:translate(18px,-15px) rotate(12deg)}50%{transform:translate(-4px,-29px) rotate(-12deg)}75%{transform:translate(-14px,-5px) rotate(8deg)}}@keyframes flowerSway{0%,100%{rotate:-6deg}50%{rotate:7deg}}@keyframes breatheBody{0%,100%{transform:scale(1)}40%{transform:scale(1.055)}41%{transform:scale(1.055)}}@keyframes breatheBelly{0%,100%{transform:scale(1)}40%{transform:scale(1.11)}}@keyframes haloBreath{0%,100%{transform:translate(-50%,-50%) scale(.91);opacity:.24}40%{transform:translate(-50%,-50%) scale(1.16);opacity:.68}}@keyframes floatHeart{to{transform:translate(var(--dx,0),-90px) rotate(13deg);opacity:0}}@keyframes twinkle{50%{opacity:.38;transform:scale(.87)}}@keyframes showModal{from{opacity:0;transform:translateY(15px) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:920px){.letter-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.garden-copy{padding:42px 38px}.journal-grid{gap:30px}.care-panel{padding:22px}}
+@media(max-width:650px){.wrap{width:calc(100% - 28px)}.header{height:75px}.brand{font-size:20px}.brand-bloom{font-size:30px}.hero-intro{padding-top:21px}.hero h1{font-size:clamp(39px,11.2vw,56px);max-width:390px}.eyebrow{font-size:9px}.hero-subtitle{font-size:13px;max-width:390px;line-height:1.8}.hero-pills{margin-top:16px;gap:6px}.hero-pills>span{font-size:10px;padding:5px 9px}.meadow-shell{margin-top:20px}.meadow-stage{width:calc(100% - 12px);height:390px;border-radius:23px}.landscape{object-position:center}.teddy-area{width:220px;height:300px;top:48%;left:50%}.bear-button{width:198px;height:205px}.breath-halo{width:190px;height:190px;top:26%}.hug-message{font-size:10px;max-width:220px}.meadow-flower{font-size:29px;width:46px;height:46px}.flower-1{left:3%;bottom:15%;font-size:33px}.flower-2{left:17%;bottom:7%;font-size:28px}.flower-3{right:3%;bottom:17%;font-size:34px}.flower-4{right:17%;bottom:7%;font-size:29px}.flower-5{right:40%;bottom:3%;font-size:26px}.butterfly{font-size:21px}.butterfly-one{left:8%;top:25%}.butterfly-two{right:9%;top:32%}.meadow-instruction{font-size:9px;right:9px;bottom:8px;padding:5px 8px}.breath-dock{margin-top:-1px;display:grid;grid-template-columns:1fr 1fr;gap:10px 7px;padding:14px 12px;border-radius:0 0 21px 21px}.breath-text{grid-column:span 2;gap:11px}.dock-icon{width:39px;height:39px;font-size:21px;border-radius:13px}.breath-text strong{font-size:12px}.breath-text small{font-size:10px}.breath-dock button{grid-column:span 2;min-height:43px}.hero-end{font-size:10px;gap:12px;padding:19px 0 28px}.hero-end p{max-width:53%}.section{padding:64px 0}.section h2{font-size:clamp(35px,9vw,45px)}.section-header{margin-bottom:25px}.section-header p{font-size:13px}.letter-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.letter-tile{min-height:132px;border-radius:16px;padding:10px 6px}.letter-tile .tile-icon{font-size:36px;margin-bottom:11px}.letter-tile .tile-label{font-size:10.5px;max-width:100px}.letter-tile .tile-action{font-size:9px;margin-top:6px}.under-grid{flex-direction:column;gap:4px}.section-care{padding-top:62px;padding-bottom:62px}.care-grid{grid-template-columns:1fr;gap:15px}.care-panel{padding:19px;border-radius:21px}.care-panel h3{font-size:26px}.care-panel>p{font-size:12px}.mood-chip{padding:10px 11px;font-size:11px}.mood-note p{font-size:18px}.garden-panel{grid-template-columns:1fr}.garden-copy{padding:34px 24px 12px}.garden-copy h2{font-size:39px}.garden-copy .inline-action{margin-left:12px}.garden-drawing{min-height:290px}.growing-plant{transform:translateX(-50%) scale(.84);transform-origin:bottom center;bottom:37px}.garden-soil{bottom:-137px}.journal-grid{grid-template-columns:1fr;gap:18px}.journal-intro{padding-top:0}.journal-intro h2{font-size:42px}.privacy-caption{margin-top:18px}.journal-box{padding:18px}.journal-controls .button{font-size:12px}.closing{padding:10px 14px 52px}.closing h2{font-size:34px}.closing p{font-size:13px}.modal-card{padding:35px 23px 20px;border-radius:22px}.modal-icon{font-size:55px}.modal-card h2{font-size:32px}.modal-card>p{font-size:18px}.modal-bottom{flex-direction:column;gap:12px}.modal-bottom .button{width:100%}}
+@media(max-width:360px){.sound-toggle{padding:0 10px}.sound-toggle #soundText{display:none}.sound-toggle{width:43px;justify-content:center}.hero h1{font-size:37px}.letter-tile{min-height:124px}.letter-tile .tile-icon{font-size:31px}.letter-grid{gap:7px}.hero-end p{display:none}.hero-end{justify-content:center}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.cloud,.butterfly{animation:none}}
+
+/* Un brotecito visible desde el principio: el jardín no debe parecer vacío. */
+.growing-plant::before{content:"🌱";position:absolute;bottom:-10px;left:50%;transform:translateX(-50%);font-size:35px;opacity:1;transition:opacity .3s;z-index:2}.growing-plant:not([data-level="0"])::before{opacity:0;pointer-events:none}
+body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGradient stop:nth-child(2){stop-color:#edc0bd}body.sunset #skyGradient stop:nth-child(3){stop-color:#f6d6b6}body.sunset .landscape>rect:first-of-type{fill:url(#skyGradient)}body.sunset .landscape .sun-halo{stroke:#ffdbd4}body.sunset .butterfly{filter:drop-shadow(0 4px 2px #442e4c22)}
+
+
+
+/* Ajustes y nuevas secciones bonitas */
+.growing-plant .leaf-left{left:17%;bottom:96px;transform:rotate(-35deg)}
+.growing-plant[data-level="2"] .leaf-left,.growing-plant[data-level="3"] .leaf-left,.growing-plant[data-level="4"] .leaf-left{height:43px;width:58px;opacity:1}
+.extras-grid,.sky-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.extras-panel,.sky-panel{padding:29px;border-radius:28px;background:#fffefa;border:1px solid #f1efe5;box-shadow:var(--soft-shadow)}.extras-panel h3,.sky-panel h3{font-family:'DM Serif Display',Georgia,serif;font-weight:400;line-height:1.15;font-size:29px;margin:10px 0 9px;letter-spacing:-.025em}.extras-panel>p,.sky-panel>p{font-size:13px;color:#849586;line-height:1.8;margin:0 0 18px}.pocket-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.pocket-btn{min-height:88px;border:1px solid #edf0e2;background:#fbfbf6;border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:10px;transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}.pocket-btn:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(66,97,74,.09);border-color:#d8e4d0}.pocket-btn span:first-child{font-size:28px}.pocket-btn span:last-child{font-size:10.5px;font-weight:800;color:#54715d;line-height:1.2}.pocket-note,.comfort-card{margin-top:16px;padding:18px 18px;border-radius:20px;background:#f4f7ee;color:#4b6650;min-height:115px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.8;font-size:15px}.comfort-actions{display:flex;flex-wrap:wrap;gap:10px}.comfort-pill{border:1px solid #d9e4d3;background:#fffdf8;color:#456e53;border-radius:999px;padding:11px 14px;font-size:12px;font-weight:800}.comfort-pill:hover{background:#f2f7ec}.firefly-scene{position:relative;min-height:250px;border-radius:26px;overflow:hidden;background:linear-gradient(180deg,#cae3f5 0%,#e5f3ed 68%,#b9d8ad 100%);border:1px solid #e7efe0;isolation:isolate}.firefly-scene::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 74% 20%,rgba(255,245,192,.55) 0,rgba(255,245,192,0) 18%),radial-gradient(circle at 26% 22%,rgba(255,255,255,.7) 0,rgba(255,255,255,0) 14%)}.ff-sun{position:absolute;right:68px;top:34px;width:58px;height:58px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff8d5 0%,#f8e7a1 42%,#f0d481 70%,#ecc770 100%);box-shadow:0 0 0 12px rgba(251,242,188,.18);animation:sunPulse 4.2s ease-in-out infinite;z-index:1}.ff-cloud{position:absolute;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.86);border-radius:999px;height:22px;z-index:1;box-shadow:0 6px 18px rgba(140,165,155,.08)}.ff-cloud::before,.ff-cloud::after{content:"";position:absolute;background:inherit;border:inherit;border-radius:50%}.ff-cloud::before{width:24px;height:24px;left:8px;top:-10px}.ff-cloud::after{width:30px;height:30px;left:24px;top:-14px}.ff-cloud.one{width:76px;left:18px;top:34px;animation:cloudDrift 16s linear infinite}.ff-cloud.two{width:92px;right:86px;top:72px;animation:cloudDrift 20s linear infinite reverse}.ff-hill{position:absolute;border-radius:50%;bottom:-62px}.ff-hill.back{left:-8%;width:70%;height:130px;background:#a8c694;z-index:1}.ff-hill.front{right:-10%;width:86%;height:150px;background:#8eb27c;z-index:2}.ff-twinkle{position:absolute;color:#fff8c7;font-size:14px;opacity:.8;z-index:1;animation:twinkleFloat 4.5s ease-in-out infinite}.ff-twinkle.t1{left:16%;top:30%}.ff-twinkle.t2{left:61%;top:24%;animation-delay:-1.2s}.ff-twinkle.t3{right:15%;top:38%;animation-delay:-2.6s}.firefly-hint{position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);padding:10px 14px;border-radius:999px;background:#fffdf7e3;border:1px solid #fffef9;color:#50735c;font-size:12px;font-weight:800;z-index:6;white-space:nowrap;backdrop-filter:blur(2px)}.firefly{position:absolute;width:10px;height:10px;border-radius:50%;background:#fff5a8;box-shadow:0 0 0 5px rgba(255,242,150,.18),0 0 14px rgba(255,247,189,.95);animation:fireflyFloat 7s ease-in-out infinite;z-index:5}.firefly-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}.cloud-input{width:100%;min-height:95px;padding:16px 17px;border-radius:20px;border:1px solid #dce4d4;background:#fffdf9;resize:vertical;color:#35563f;line-height:1.7}.cloud-scene{position:relative;min-height:180px;margin-top:14px;border-radius:26px;overflow:hidden;background:linear-gradient(180deg,#f1f7fb 0%,#eaf2ee 65%,#dfe9d6 100%);border:1px solid #e8efe1}.cloud-placeholder{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);padding:10px 15px;border-radius:999px;background:#fffefa;color:#6a8572;font-size:12px;font-weight:700;white-space:nowrap}.floating-cloud{position:absolute;max-width:180px;padding:16px 18px;border-radius:26px;background:#fffefa;border:1px solid #eef1ea;box-shadow:0 10px 22px rgba(67,97,76,.08);color:#52715d;font-size:12.5px;line-height:1.5;animation:cloudSail 18s linear forwards}.floating-cloud::before,.floating-cloud::after{content:"";position:absolute;border-radius:50%;background:#fffefa;border:1px solid #eef1ea}.floating-cloud::before{width:34px;height:34px;left:18px;top:-15px}.floating-cloud::after{width:48px;height:48px;left:46px;top:-23px}.tiny-caption{margin-top:12px;font-size:11px;color:#86a08d}.mini-divider{height:1px;background:linear-gradient(90deg,transparent,#dfe7db,transparent);margin:16px 0}.gratitude-list{display:flex;flex-wrap:wrap;gap:10px}.gratitude-chip{border:1px solid #d9e5d3;background:#f8fbf3;color:#4a6a56;border-radius:999px;padding:9px 12px;font-size:11px;font-weight:800}.gratitude-chip.selected{background:#416e56;color:#fff;border-color:#416e56}.gratitude-output{margin-top:14px;padding:16px 18px;border-radius:18px;background:#f4f7ef;color:#4c6752;font-size:14px;line-height:1.8;min-height:70px}
+@keyframes fireflyFloat{0%,100%{transform:translate(0,0) scale(1);opacity:.9}25%{transform:translate(16px,-28px) scale(1.08);opacity:1}50%{transform:translate(-10px,-42px) scale(.92);opacity:.75}75%{transform:translate(20px,-14px) scale(1.02);opacity:.95}}
+@keyframes sunPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes cloudDrift{0%{transform:translateX(0)}50%{transform:translateX(18px)}100%{transform:translateX(0)}}
+@keyframes swayGrass{0%,100%{transform:rotate(0deg)}25%{transform:rotate(4deg)}75%{transform:rotate(-5deg)}}
+@keyframes twinkleFloat{0%,100%{transform:translateY(0) scale(1);opacity:.65}50%{transform:translateY(-8px) scale(1.08);opacity:1}}
+@keyframes cloudSail{0%{transform:translateX(-30%) translateY(12px);opacity:0}8%{opacity:1}100%{transform:translateX(160%) translateY(-24px);opacity:0}}
+@media(max-width:920px){.extras-grid,.sky-grid{grid-template-columns:1fr}.pocket-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:650px){.growing-plant .leaf-left{left:14%;bottom:100px}.pocket-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}.pocket-btn{min-height:80px;border-radius:16px}.pocket-btn span:first-child{font-size:24px}.pocket-btn span:last-child{font-size:10px}.extras-panel,.sky-panel{padding:19px;border-radius:21px}.extras-panel h3,.sky-panel h3{font-size:25px}.pocket-note,.comfort-card{font-size:14px;min-height:100px;padding:15px}.firefly-scene{min-height:210px}.ff-sun{right:34px;top:28px;width:44px;height:44px}.ff-cloud.one{top:30px;left:8px}.ff-cloud.two{right:24px;top:68px;width:76px}.firefly-hint,.cloud-placeholder{font-size:10px;white-space:normal;text-align:center;max-width:80%}.floating-cloud{max-width:145px;font-size:11px;padding:14px 14px}}
+
+
+/* Jardín de luciérnagas — plantas con hojas y flores, no líneas rectas. */
+.ff-botanical{position:absolute;left:0;right:0;bottom:-2px;width:100%;height:155px;z-index:4;pointer-events:none;overflow:visible}
+.ff-botanical .bot-flower{transform-origin:center bottom;transform-box:fill-box;animation:botanicalSway 4.5s ease-in-out infinite}
+.ff-botanical .bot-tuft{transform-box:fill-box;transform-origin:center bottom;animation:botanicalSway 5.5s ease-in-out infinite alternate}
+.ff-drift-butterfly{position:absolute;z-index:5;pointer-events:none;font-size:22px;left:25%;top:42%;filter:drop-shadow(0 2px 2px rgba(60,84,65,.13));animation:butterflyWander 9s ease-in-out infinite}
+.ff-drift-butterfly.second{left:75%;top:49%;animation-delay:-4.5s;animation-duration:11s;font-size:18px}
+.firefly{width:9px;height:9px;box-shadow:0 0 0 5px rgba(255,242,150,.13),0 0 15px 4px rgba(255,244,161,.6);animation:fireflyFloat 7s ease-in-out infinite, fireflyBlink 2.8s ease-in-out infinite alternate}
+@keyframes botanicalSway{0%,100%{rotate:-2deg}50%{rotate:3deg}}
+@keyframes butterflyWander{0%,100%{transform:translate(0,0) rotate(-8deg)}30%{transform:translate(20px,-17px) rotate(7deg)}60%{transform:translate(-13px,-31px) rotate(-6deg)}80%{transform:translate(10px,-13px) rotate(4deg)}}
+@keyframes fireflyBlink{0%,100%{filter:brightness(.95)}50%{filter:brightness(1.32)}}
+@media(max-width:650px){.ff-botanical{height:135px}.ff-drift-butterfly{font-size:18px}.ff-drift-butterfly.second{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.ff-botanical .bot-flower,.ff-botanical .bot-tuft,.ff-drift-butterfly,.firefly{animation:none!important}}
+
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#principal">Ir al contenido</a>
+  <header class="header wrap" aria-label="Encabezado">
+    <a class="brand" href="#inicio" aria-label="Volver al inicio"><span class="brand-bloom">✿</span><span>para Noe <small>un lugar bonito</small></span></a>
+    <div class="header-controls">
+      <button id="lightToggle" class="round-control" type="button" aria-pressed="false" aria-label="Cambiar a atardecer" title="Cambiar paisaje"><span aria-hidden="true">🌅</span></button>
+      <button id="soundToggle" class="sound-toggle" type="button" aria-pressed="false"><span aria-hidden="true" id="soundIcon">♫</span><span id="soundText">Música suave</span></button>
+    </div>
+  </header>
+
+  <section class="hero" id="inicio" aria-labelledby="hero-title">
+    <div class="hero-light"></div>
+    <div class="wrap hero-intro">
+      <p class="eyebrow"><span class="sparkle-symbol">✦</span> ALGO PEQUEÑITO HECHO CON CARIÑO</p>
+      <h1 id="hero-title">Un pedacito de <em>calma</em> para Noe.</h1>
+      <p class="hero-subtitle">Para los días bonitos y para esos en los que todo se complica. Aquí puedes respirar, descansar un ratito y recordar que <strong>no tienes que poder con todo hoy.</strong></p>
+      <div class="hero-pills"><span>🌷 Sin prisa</span><span>🧸 Con un osito</span><span>💌 Cartas para abrir</span></div>
+    </div>
+
+    <div class="meadow-shell" id="pradera">
+      <div class="meadow-stage" id="meadowStage" aria-label="Pradera animada, con flores, mariposas y un osito al que puedes tocar">
+        <svg class="landscape" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9e2f0"/><stop offset=".61" stop-color="#e8f5e8"/><stop offset="1" stop-color="#f7e8c6"/></linearGradient>
+            <linearGradient id="hillBack" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#cce3aa"/><stop offset="1" stop-color="#8fbf88"/></linearGradient>
+            <linearGradient id="hillMid" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#9bd19b"/><stop offset="1" stop-color="#6ca977"/></linearGradient>
+            <linearGradient id="hillFront" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#7fba79"/><stop offset="1" stop-color="#528a64"/></linearGradient>
+            <radialGradient id="sunGrad"><stop stop-color="#fff7d1"/><stop offset="1" stop-color="#f6d8a0"/></radialGradient>
+          </defs>
+          <rect width="1200" height="560" fill="url(#skyGradient)"/>
+          <circle class="sun" cx="948" cy="118" r="64" fill="url(#sunGrad)"/>
+          <circle class="sun-halo" cx="948" cy="118" r="87" fill="none" stroke="#fff8e2" stroke-opacity=".4" stroke-width="18"/>
+          <g class="cloud cloud-a" fill="#fffdf8" opacity=".77"><ellipse cx="195" cy="124" rx="78" ry="21"/><circle cx="162" cy="113" r="32"/><circle cx="211" cy="107" r="37"/></g>
+          <g class="cloud cloud-b" fill="#fffdf8" opacity=".6"><ellipse cx="746" cy="175" rx="87" ry="23"/><circle cx="706" cy="161" r="34"/><circle cx="765" cy="158" r="38"/></g>
+          <g class="cloud cloud-c" fill="#fffdf8" opacity=".72"><ellipse cx="1087" cy="218" rx="68" ry="17"/><circle cx="1064" cy="204" r="25"/><circle cx="1102" cy="202" r="31"/></g>
+          <path d="M0 358 Q130 256 262 321 T540 303 T849 323 T1200 300 V560 H0Z" fill="url(#hillBack)"/>
+          <path d="M0 416 Q176 332 346 374 T673 352 T1200 390 V560 H0Z" fill="url(#hillMid)"/>
+          <path d="M0 471 Q180 409 362 443 T754 417 T1200 440 V560 H0Z" fill="url(#hillFront)"/>
+          <path d="M0 534 Q204 489 445 516 T882 495 T1200 507 V560 H0Z" fill="#4f8f65" opacity=".5"/>
+          <path d="M0 482 Q120 462 274 476 T576 466 T844 480 T1200 468" fill="none" stroke="#a7cf8d" stroke-opacity=".3" stroke-width="7"/>
+          <g class="grass-lines" fill="none" stroke="#326e50" stroke-width="3" stroke-linecap="round" opacity=".5">
+            <path d="M70 539l-9 -18m9 18l12 -20M120 499l-6 -14m6 14l9 -18M202 539l-10 -16m10 16l8 -25M289 478l-8 -19m8 19l13 -18M376 524l-13 -18m13 18l7 -20M447 489l-11 -18m11 18l12 -19M516 544l-9 -17m9 17l7 -24M644 527l-10 -21m10 21l11 -16M764 501l-9 -22m9 22l9 -18M826 542l-14 -19m14 19l9 -22M939 492l-8 -17m8 17l8 -23M1051 541l-10 -23m10 23l12 -17M1146 510l-11 -21m11 21l9 -22"/>
+          </g>
+          <g class="distant-flowers" opacity=".92">
+            <g transform="translate(120 450)"><path d="M0 0v28" stroke="#527e4c" stroke-width="3"/><circle r="6" fill="#ffedbd"/><circle cx="-10" cy="0" r="5" fill="#fff7e9"/><circle cx="10" cy="0" r="5" fill="#fff7e9"/><circle cy="-10" r="5" fill="#fff7e9"/><circle cy="10" r="5" fill="#fff7e9"/></g>
+            <g transform="translate(335 465) scale(.77)"><path d="M0 0v28" stroke="#527e4c" stroke-width="3"/><circle r="6" fill="#ffcda3"/><circle cx="-10" cy="0" r="5" fill="#f9d3d9"/><circle cx="10" cy="0" r="5" fill="#f9d3d9"/><circle cy="-10" r="5" fill="#f9d3d9"/><circle cy="10" r="5" fill="#f9d3d9"/></g>
+            <g transform="translate(1000 462)"><path d="M0 0v28" stroke="#527e4c" stroke-width="3"/><circle r="6" fill="#ffe39c"/><circle cx="-10" cy="0" r="5" fill="#f9f0d9"/><circle cx="10" cy="0" r="5" fill="#f9f0d9"/><circle cy="-10" r="5" fill="#f9f0d9"/><circle cy="10" r="5" fill="#f9f0d9"/></g>
+            <g transform="translate(845 491) scale(.75)"><path d="M0 0v28" stroke="#527e4c" stroke-width="3"/><circle r="6" fill="#e9a8ad"/><circle cx="-10" cy="0" r="5" fill="#f7ced9"/><circle cx="10" cy="0" r="5" fill="#f7ced9"/><circle cy="-10" r="5" fill="#f7ced9"/><circle cy="10" r="5" fill="#f7ced9"/></g>
+          </g>
+          <g opacity=".3" fill="#fff8df"><circle cx="190" cy="357" r="3"/><circle cx="437" cy="395" r="4"/><circle cx="813" cy="365" r="3"/><circle cx="1027" cy="393" r="4"/><circle cx="66" cy="410" r="3"/><circle cx="1159" cy="425" r="3"/></g>
+        </svg>
+        <div class="butterfly butterfly-one" aria-hidden="true">🦋</div>
+        <div class="butterfly butterfly-two" aria-hidden="true">🦋</div>
+        <div id="sunsetStars" class="night-stars" aria-hidden="true">✦　·　✧　✦　·　✧</div>
+        <div class="teddy-area">
+          <div class="breath-halo" id="breathHalo" aria-hidden="true"></div>
+          <button class="bear-button" id="bearHug" type="button" title="Toca al osito para recibir un abrazo" aria-label="Darle un abrazo al osito">
+            <svg class="bear-art" viewBox="0 0 290 300" aria-hidden="true">
+              <defs>
+                <linearGradient id="fur" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eac8a4"/><stop offset=".45" stop-color="#d7a77f"/><stop offset="1" stop-color="#b77c58"/></linearGradient>
+                <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff4e5"/><stop offset="1" stop-color="#f0d6bc"/></linearGradient>
+                <filter id="softShadow" x="-25%" y="-25%" width="150%" height="150%"><feGaussianBlur stdDeviation="5"/></filter>
+              </defs>
+              <ellipse cx="145" cy="280" rx="100" ry="15" fill="#274d38" opacity=".22" filter="url(#softShadow)"/>
+              <ellipse cx="78" cy="67" rx="34" ry="37" fill="url(#fur)"/><ellipse cx="79" cy="66" rx="20" ry="23" fill="#bb836c"/>
+              <ellipse cx="214" cy="67" rx="34" ry="37" fill="url(#fur)"/><ellipse cx="212" cy="66" rx="20" ry="23" fill="#bb836c"/>
+              <g class="bear-torso">
+                <ellipse cx="146" cy="203" rx="91" ry="84" fill="url(#fur)"/>
+                <ellipse class="bear-belly" cx="146" cy="210" rx="58" ry="61" fill="url(#belly)"/>
+                <ellipse cx="68" cy="183" rx="27" ry="53" transform="rotate(17 68 183)" fill="#cb9772"/>
+                <ellipse cx="224" cy="183" rx="27" ry="53" transform="rotate(-17 224 183)" fill="#cb9772"/>
+                <ellipse cx="83" cy="268" rx="46" ry="28" transform="rotate(-10 83 268)" fill="#c18a67"/>
+                <ellipse cx="210" cy="268" rx="46" ry="28" transform="rotate(10 210 268)" fill="#c18a67"/>
+                <ellipse cx="83" cy="268" rx="23" ry="14" transform="rotate(-10 83 268)" fill="#e8bb9c"/>
+                <ellipse cx="210" cy="268" rx="23" ry="14" transform="rotate(10 210 268)" fill="#e8bb9c"/>
+                <path d="M145 170q-10 -15 -20 1q-4 10 20 24q26 -14 20 -24q-11 -17 -20 -1" fill="#e6a8a7" opacity=".8"/>
+              </g>
+              <ellipse cx="145" cy="112" rx="86" ry="80" fill="url(#fur)"/>
+              <ellipse cx="112" cy="119" rx="8.4" ry="11" fill="#49362e"/><ellipse cx="177" cy="119" rx="8.4" ry="11" fill="#49362e"/>
+              <circle cx="114" cy="115" r="2.5" fill="#fffaf5"/><circle cx="179" cy="115" r="2.5" fill="#fffaf5"/>
+              <ellipse cx="93" cy="139" rx="15" ry="7" fill="#eaa4a1" opacity=".55"/><ellipse cx="198" cy="139" rx="15" ry="7" fill="#eaa4a1" opacity=".55"/>
+              <ellipse cx="145" cy="153" rx="36" ry="28" fill="#f6e6d3"/>
+              <path d="M132 146q13 -10 26 0q0 14 -13 15q-13 -1 -13 -15" fill="#49362e"/>
+              <path d="M145 160v10m0 0q-9 9 -17 0m17 0q9 9 17 0" fill="none" stroke="#68483b" stroke-width="3" stroke-linecap="round"/>
+              <ellipse cx="95" cy="88" rx="18" ry="30" transform="rotate(19 95 88)" fill="#fff7e7" opacity=".14"/>
+            </svg>
+          </button>
+          <div id="hugMessage" class="hug-message" aria-live="polite">Toca al osito. Le encantan los abrazos. ♡</div>
+        </div>
+        <button type="button" class="meadow-flower flower-1" aria-label="Tocar una margarita" data-flower="🌼">🌼</button>
+        <button type="button" class="meadow-flower flower-2" aria-label="Tocar una flor rosa" data-flower="🌸">🌸</button>
+        <button type="button" class="meadow-flower flower-3" aria-label="Tocar una flor amarilla" data-flower="🌻">🌻</button>
+        <button type="button" class="meadow-flower flower-4" aria-label="Tocar una flor violeta" data-flower="🌷">🌷</button>
+        <button type="button" class="meadow-flower flower-5" aria-label="Tocar otra margarita" data-flower="🌼">🌼</button>
+        <div class="meadow-instruction">✿ Puedes tocar las flores y al osito ✿</div>
+      </div>
+      <div class="breath-dock wrap" id="respirar">
+        <div class="breath-text"><span class="dock-icon">🫧</span><span><strong id="breathTitle">Un respiro contigo</strong><small id="breathHint">El osito puede respirar a tu ritmo: 4 segundos al inhalar y 6 al exhalar.</small></span></div>
+        <button id="breathStart" class="button button-primary" type="button">Respirar con él <span aria-hidden="true">↗</span></button>
+        <button id="breathStop" class="button button-outline hidden" type="button">Terminar pausa</button>
+      </div>
+    </div>
+    <div class="hero-end wrap"><p>Una pausa también es una forma de cuidarse.</p><a href="#cartas">Descubrir las cartitas <span aria-hidden="true">↓</span></a></div>
+  </section>
+
+  <main id="principal">
+    <section class="section section-letters wrap" id="cartas" aria-labelledby="lettersTitle">
+      <div class="section-header centered"><span class="section-kicker">✦ EL JARDÍN DE LAS CARTAS</span><h2 id="lettersTitle">Hay palabras bonitas <em>escondidas aquí.</em></h2><p>Escoge la flor, la estrella o el dibujito que más te guste. Todas las cartas están abiertas, todos los días. Sin fechas, sin candados, sin tener que esperar.</p></div>
+      <div class="letter-grid" id="letterGrid" aria-label="Cartas para abrir libremente"></div>
+      <div class="under-grid"><button class="button button-outline" type="button" id="surpriseLetter">✉️ Sorpréndeme con una carta</button><span>Nunca hay una carta equivocada.</span></div>
+    </section>
+
+    <div class="section-wave" aria-hidden="true"></div>
+    <section class="section section-care" id="pausas" aria-labelledby="careTitle">
+      <div class="wrap"><div class="section-header"><span class="section-kicker">UNOS MINUTOS PARA TI</span><h2 id="careTitle">Pequeñas cosas para <em>volver a la calma.</em></h2><p>Elige lo que necesites hoy. No tienes que hacer nada perfecto ni terminar todos los ejercicios.</p></div>
+      <div class="care-grid">
+        <div class="care-panel" id="moodPanel"><span class="care-icon">🫶</span><h3>¿Cómo va tu corazoncito?</h3><p>Puedes sentir lo que sientes. Hay una notita para cada momento.</p>
+          <div class="mood-options" role="group" aria-label="Selecciona cómo te sientes"><button class="mood-chip selected" type="button" data-mood="ansiosa" aria-pressed="true">🌫️ Inquieta</button><button class="mood-chip" type="button" data-mood="triste" aria-pressed="false">🌧️ Triste</button><button class="mood-chip" type="button" data-mood="cansada" aria-pressed="false">🍂 Cansada</button><button class="mood-chip" type="button" data-mood="bien" aria-pressed="false">☀️ Un poquito mejor</button></div>
+          <div class="mood-note" aria-live="polite"><span>UNA NOTITA PARA NOE</span><p id="moodMessage"></p></div><button class="inline-action" type="button" id="nextMood">Otra notita <span>↗</span></button>
+        </div>
+        <div class="care-panel grounding-panel"><span class="care-icon">🪻</span><h3>Vuelve al momento presente</h3><p>Un pequeño recorrido con tus sentidos cuando la mente va demasiado rápido.</p>
+          <div class="ground-card" aria-live="polite"><span class="ground-number" id="groundNumber">5</span><div><strong id="groundTitle">Cosas que puedes ver</strong><p id="groundHelp">Mira a tu alrededor y elige una.</p></div></div>
+          <div class="ground-progress" id="groundProgress" aria-label="Progreso del ejercicio"></div>
+          <div class="ground-actions"><button class="button button-primary" type="button" id="groundNext">Encontré una ✨</button><button class="button button-quiet" type="button" id="groundReset">Reiniciar</button></div>
+        </div>
+      </div></div>
+    </section>
+
+    <section class="section meadow-garden wrap" id="jardin" aria-labelledby="gardenTitle">
+      <div class="garden-panel"><div class="garden-copy"><span class="section-kicker">UN JARDÍN SIN PRISAS</span><h2 id="gardenTitle">Haz crecer una <em>florecita.</em></h2><p>Por cada pequeño gesto, una hojita más. No hay cronómetro ni puntuaciones. Puedes volver cuando quieras.</p><button class="button button-primary" type="button" id="growFlower">Regar un poquito <span aria-hidden="true">💧</span></button><button class="inline-action" type="button" id="resetGarden">Volver a empezar ↻</button><p id="gardenMessage" class="garden-message" aria-live="polite">Hasta las flores crecen a su ritmo.</p></div><div class="garden-drawing" aria-hidden="true"><div class="garden-sun">☀</div><div class="growing-plant" id="growingPlant"><div class="stem"></div><div class="leaf leaf-left"></div><div class="leaf leaf-right"></div><div class="bloom"><span>✿</span></div></div><div class="garden-soil"></div><span class="garden-drop one">✦</span><span class="garden-drop two">✧</span><span class="garden-drop three">✦</span></div></div>
+    </section>
+
+    <section class="section section-journal wrap" aria-labelledby="journalTitle"><div class="journal-grid"><div class="journal-intro"><span class="section-kicker">UN ESPACIO SOLO TUYO</span><h2 id="journalTitle">Si algo pesa, <em>puedes dejarlo aquí.</em></h2><p>No tienes que compartirlo con nadie. Puedes escribir una frase, guardarla en este navegador o dejar que se vaya. Tú eliges.</p><div class="privacy-caption">🔒 Tus notas solo se guardan en este dispositivo. Nadie más las recibe.</div></div><div class="journal-box"><label for="journalInput">Lo que hoy me gustaría soltar…</label><textarea id="journalInput" maxlength="1500" placeholder="No hace falta que tenga sentido ni que esté bien escrito."></textarea><div class="journal-controls"><button class="button button-primary" type="button" id="releaseNote">🍃 Soltarlo por hoy</button><button class="button button-outline" type="button" id="saveNote">Guardar para mí</button></div><p id="journalStatus" class="small-status" aria-live="polite">Este espacio no pide respuestas ni explicaciones.</p><div id="savedNotes" class="saved-notes"></div></div></div></section>
+
+
+
+    <section class="section wrap" id="tesoritos" aria-labelledby="extrasTitle">
+      <div class="section-header centered"><span class="section-kicker">MÁS COSITAS BONITAS</span><h2 id="extrasTitle">Pequeños tesoritos <em>para explorar.</em></h2><p>Quise que este rincón tuviera más sorpresitas suaves, como si cada toque abriera una ventanita bonita dentro de la pradera.</p></div>
+      <div class="extras-grid">
+        <div class="extras-panel"><span class="care-icon">🧺</span><h3>Canastita de cositas lindas</h3><p>Toca cualquier dibujito. Cada uno guarda una idea suave, una mini pausa o una frase bonita para acompañarte.</p><div class="pocket-grid" id="pocketGrid"></div><div class="pocket-note" id="pocketNote" aria-live="polite">Toca una flor, una tacita o una estrellita para descubrir algo bonito. ✨</div></div>
+        <div class="extras-panel"><span class="care-icon">🎀</span><h3>Un mimo para este momento</h3><p>Si no sabes qué necesitas, puedes pedirle a este rincón un abracito, una sonrisita, un recordatorio bonito o una mini misión suave.</p><div class="comfort-actions"><button class="comfort-pill" type="button" id="comfortHug">🧸 Abracito</button><button class="comfort-pill" type="button" id="comfortSmile">🌼 Sonrisita</button><button class="comfort-pill" type="button" id="comfortReminder">💗 Recordatorio</button><button class="comfort-pill" type="button" id="comfortMission">🍃 Mini misión</button></div><div class="comfort-card" id="comfortCard" aria-live="polite">Aquí aparecerá una cosita bonita para este momento.</div><div class="mini-divider"></div><p style="margin-bottom:10px">Y si quieres algo todavía más suave, puedes elegir una cosita pequeña por la cual agradecer hoy.</p><div class="gratitude-list" id="gratitudeList"><button type="button" class="gratitude-chip">Un respiro</button><button type="button" class="gratitude-chip">Un rayito de sol</button><button type="button" class="gratitude-chip">Tu camita</button><button type="button" class="gratitude-chip">Una canción</button><button type="button" class="gratitude-chip">Una persona buena</button><button type="button" class="gratitude-chip">Un cafecito</button></div><div class="gratitude-output" id="gratitudeOutput">A veces una cosita pequeñita también basta para volver al presente.</div></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="cieloBonito" aria-labelledby="skyTitle">
+      <div class="section-header centered"><span class="section-kicker">UN POQUITO MÁS DE MAGIA</span><h2 id="skyTitle">Un cielo tranquilo <em>para soltar y respirar.</em></h2><p>Quería darte también un lugar para dejar algo en el viento o llenar el cielo con luciérnagas suaves.</p></div>
+      <div class="sky-grid">
+        <div class="sky-panel"><span class="care-icon">✨</span><h3>Cielo de luciérnagas</h3><p>Cuando toques el botón, aparecerán lucecitas en la pradera. No hacen nada complicado: solo alumbran un poquito.</p><div class="firefly-scene" id="fireflyScene"><div class="ff-sun"></div><div class="ff-cloud one"></div><div class="ff-cloud two"></div><div class="ff-hill back"></div><div class="ff-hill front"></div><svg class="ff-botanical" viewBox="0 0 700 160" preserveAspectRatio="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="botLeaf" x1="0" y1="0" x2=".75" y2="1"><stop stop-color="#87b578"/><stop offset="1" stop-color="#477e58"/></linearGradient><linearGradient id="botPetal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fffdfa"/><stop offset="1" stop-color="#e8e5cd"/></linearGradient></defs><path d="M0 151 C160 115 266 164 385 135 S575 111 700 145 V160 H0Z" fill="#649a69" opacity=".42"/><g class="bot-tuft" style="animation-delay:0.00s" transform="translate(-10 164) rotate(-3) scale(0.87)"><path d="M 0 0 Q -22 -29 -20 -71 Q -1 -56 0 0" fill="#528d5e" opacity=".94"/><path d="M 0 0 Q 24 -25 25 -56 Q 1 -39 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -56 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-0.18s" transform="translate(17 163) rotate(7) scale(0.81)"><path d="M 0 0 Q -13 -18 -12 -43 Q 0 -34 0 0" fill="#6a9b67" opacity=".94"/><path d="M 0 0 Q 14 -15 15 -34 Q 0 -23 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -34 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-0.36s" transform="translate(44 168) rotate(3) scale(0.96)"><path d="M 0 0 Q -10 -14 -9 -34 Q 0 -27 0 0" fill="#7caa6f" opacity=".94"/><path d="M 0 0 Q 11 -12 12 -27 Q 0 -18 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -27 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-0.54s" transform="translate(71 154) rotate(-2) scale(1.03)"><path d="M 0 0 Q -16 -22 -15 -53 Q -1 -42 0 0" fill="#4e8559" opacity=".94"/><path d="M 0 0 Q 18 -19 19 -42 Q 1 -29 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -42 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-0.72s" transform="translate(98 167) rotate(5) scale(1.10)"><path d="M 0 0 Q -18 -24 -16 -58 Q -1 -46 0 0" fill="#82aa72" opacity=".94"/><path d="M 0 0 Q 19 -20 20 -46 Q 1 -31 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -46 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-0.90s" transform="translate(125 163) rotate(-5) scale(1.04)"><path d="M 0 0 Q -15 -20 -13 -48 Q 0 -38 0 0" fill="#528d5e" opacity=".94"/><path d="M 0 0 Q 16 -17 17 -38 Q 0 -26 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -38 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-1.08s" transform="translate(152 154) rotate(-2) scale(1.19)"><path d="M 0 0 Q -17 -22 -15 -54 Q -1 -43 0 0" fill="#6a9b67" opacity=".94"/><path d="M 0 0 Q 18 -19 19 -43 Q 1 -29 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -43 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-1.26s" transform="translate(179 158) rotate(-3) scale(0.75)"><path d="M 0 0 Q -9 -13 -8 -31 Q 0 -24 0 0" fill="#7caa6f" opacity=".94"/><path d="M 0 0 Q 10 -11 11 -24 Q 0 -17 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -24 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-1.44s" transform="translate(206 161) rotate(-5) scale(1.12)"><path d="M 0 0 Q -21 -28 -19 -67 Q -1 -53 0 0" fill="#4e8559" opacity=".94"/><path d="M 0 0 Q 22 -24 24 -53 Q 1 -36 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -53 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-1.62s" transform="translate(233 168) rotate(7) scale(1.02)"><path d="M 0 0 Q -8 -10 -7 -25 Q 0 -20 0 0" fill="#82aa72" opacity=".94"/><path d="M 0 0 Q 8 -9 9 -20 Q 0 -13 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -20 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-1.80s" transform="translate(260 157) rotate(-4) scale(0.95)"><path d="M 0 0 Q -12 -16 -11 -39 Q 0 -31 0 0" fill="#528d5e" opacity=".94"/><path d="M 0 0 Q 13 -14 14 -31 Q 0 -21 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -31 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-1.98s" transform="translate(287 155) rotate(1) scale(1.12)"><path d="M 0 0 Q -18 -23 -16 -57 Q -1 -45 0 0" fill="#6a9b67" opacity=".94"/><path d="M 0 0 Q 19 -20 20 -45 Q 1 -31 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -45 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-2.16s" transform="translate(314 157) rotate(-6) scale(1.04)"><path d="M 0 0 Q -13 -18 -12 -43 Q 0 -34 0 0" fill="#7caa6f" opacity=".94"/><path d="M 0 0 Q 14 -15 15 -34 Q 0 -23 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -34 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-2.34s" transform="translate(341 156) rotate(-7) scale(0.98)"><path d="M 0 0 Q -12 -15 -11 -38 Q 0 -30 0 0" fill="#4e8559" opacity=".94"/><path d="M 0 0 Q 12 -13 13 -30 Q 0 -20 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -30 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-2.52s" transform="translate(368 168) rotate(5) scale(0.77)"><path d="M 0 0 Q -17 -22 -15 -54 Q -1 -43 0 0" fill="#82aa72" opacity=".94"/><path d="M 0 0 Q 18 -19 19 -43 Q 1 -29 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -43 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-2.70s" transform="translate(395 158) rotate(-7) scale(0.88)"><path d="M 0 0 Q -10 -13 -9 -33 Q 0 -26 0 0" fill="#528d5e" opacity=".94"/><path d="M 0 0 Q 11 -11 11 -26 Q 0 -18 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -26 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-2.88s" transform="translate(422 155) rotate(-1) scale(0.74)"><path d="M 0 0 Q -9 -13 -8 -31 Q 0 -24 0 0" fill="#6a9b67" opacity=".94"/><path d="M 0 0 Q 10 -11 11 -24 Q 0 -17 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -24 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-3.06s" transform="translate(449 162) rotate(-2) scale(1.21)"><path d="M 0 0 Q -13 -17 -12 -42 Q 0 -33 0 0" fill="#7caa6f" opacity=".94"/><path d="M 0 0 Q 14 -15 15 -33 Q 0 -23 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -33 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-3.24s" transform="translate(476 168) rotate(-3) scale(1.19)"><path d="M 0 0 Q -18 -23 -16 -57 Q -1 -45 0 0" fill="#4e8559" opacity=".94"/><path d="M 0 0 Q 19 -20 20 -45 Q 1 -31 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -45 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-3.42s" transform="translate(503 157) rotate(6) scale(0.75)"><path d="M 0 0 Q -22 -29 -20 -70 Q -1 -56 0 0" fill="#82aa72" opacity=".94"/><path d="M 0 0 Q 23 -25 25 -56 Q 1 -38 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -56 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-3.60s" transform="translate(530 159) rotate(5) scale(0.82)"><path d="M 0 0 Q -8 -11 -7 -27 Q 0 -21 0 0" fill="#528d5e" opacity=".94"/><path d="M 0 0 Q 9 -9 9 -21 Q 0 -14 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -21 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-3.78s" transform="translate(557 168) rotate(1) scale(0.82)"><path d="M 0 0 Q -18 -24 -16 -58 Q -1 -46 0 0" fill="#6a9b67" opacity=".94"/><path d="M 0 0 Q 19 -20 20 -46 Q 1 -31 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -46 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-3.96s" transform="translate(584 167) rotate(5) scale(0.83)"><path d="M 0 0 Q -7 -10 -6 -24 Q 0 -19 0 0" fill="#7caa6f" opacity=".94"/><path d="M 0 0 Q 8 -8 8 -19 Q 0 -13 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -19 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-4.14s" transform="translate(611 165) rotate(-1) scale(1.24)"><path d="M 0 0 Q -10 -13 -9 -33 Q 0 -26 0 0" fill="#4e8559" opacity=".94"/><path d="M 0 0 Q 11 -11 11 -26 Q 0 -18 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -26 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-4.32s" transform="translate(638 164) rotate(1) scale(1.22)"><path d="M 0 0 Q -15 -20 -14 -49 Q 0 -39 0 0" fill="#82aa72" opacity=".94"/><path d="M 0 0 Q 16 -17 17 -39 Q 0 -26 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -39 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-4.50s" transform="translate(665 164) rotate(0) scale(0.88)"><path d="M 0 0 Q -16 -22 -15 -53 Q -1 -42 0 0" fill="#528d5e" opacity=".94"/><path d="M 0 0 Q 18 -19 19 -42 Q 1 -29 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -42 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-4.68s" transform="translate(692 165) rotate(5) scale(1.01)"><path d="M 0 0 Q -12 -15 -11 -38 Q 0 -30 0 0" fill="#6a9b67" opacity=".94"/><path d="M 0 0 Q 12 -13 13 -30 Q 0 -20 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -30 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-tuft" style="animation-delay:-4.86s" transform="translate(719 168) rotate(1) scale(0.75)"><path d="M 0 0 Q -8 -10 -7 -26 Q 0 -20 0 0" fill="#7caa6f" opacity=".94"/><path d="M 0 0 Q 8 -9 9 -20 Q 0 -14 0 0" fill="#609d6b" opacity=".9"/><path d="M0 0 Q -4 -29 -3 -20 Q 8 -24 0 0" fill="#9cbb84" opacity=".75"/></g><g class="bot-flower" style="animation-delay:0.00s"><path d="M37 160 Q46 124 37 98" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M40 136 Q18 117 15 129 Q17 147 40 136" fill="#78ac77"/><path d="M40 146 Q54 123 56 135 Q52 151 40 146" fill="#80b17d"/><g transform="translate(37 95)"><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2adbb" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2adbb" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2adbb" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2adbb" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2adbb" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="4.6" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><g class="bot-flower" style="animation-delay:-0.41s"><path d="M92 160 Q84 136 92 106" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M89 148 Q73 129 70 141 Q72 159 89 148" fill="#78ac77"/><path d="M89 158 Q109 135 111 147 Q107 163 89 158" fill="#80b17d"/><g transform="translate(92 103)"><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#fff8e6" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#fff8e6" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#fff8e6" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#fff8e6" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#fff8e6" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="5.5" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><g class="bot-flower" style="animation-delay:-0.82s"><path d="M157 160 Q166 116 157 85" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M160 128 Q138 109 135 121 Q137 139 160 128" fill="#78ac77"/><path d="M160 138 Q174 115 176 127 Q172 143 160 138" fill="#80b17d"/><g transform="translate(157 82)"><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#f2d6f0" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#f2d6f0" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#f2d6f0" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#f2d6f0" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#f2d6f0" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="6.4" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><g class="bot-flower" style="animation-delay:-1.23s"><path d="M226 160 Q218 137 226 112" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M223 149 Q207 130 204 142 Q206 160 223 149" fill="#78ac77"/><path d="M223 159 Q243 136 245 148 Q241 164 223 159" fill="#80b17d"/><g transform="translate(226 109)"><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#fff2d2" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#fff2d2" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#fff2d2" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#fff2d2" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#fff2d2" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="4.6" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><g class="bot-flower" style="animation-delay:-1.64s"><path d="M296 160 Q305 119 296 91" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M299 131 Q277 112 274 124 Q276 142 299 131" fill="#78ac77"/><path d="M299 141 Q313 118 315 130 Q311 146 299 141" fill="#80b17d"/><g transform="translate(296 88)"><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#f1ab9f" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#f1ab9f" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#f1ab9f" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#f1ab9f" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#f1ab9f" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="5.5" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><g class="bot-flower" style="animation-delay:-2.05s"><path d="M376 160 Q368 129 376 98" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M373 141 Q357 122 354 134 Q356 152 373 141" fill="#78ac77"/><path d="M373 151 Q393 128 395 140 Q391 156 373 151" fill="#80b17d"/><g transform="translate(376 95)"><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fff8e8" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fff8e8" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fff8e8" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fff8e8" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fff8e8" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="6.4" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><g class="bot-flower" style="animation-delay:-2.46s"><path d="M445 160 Q454 128 445 102" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M448 140 Q426 121 423 133 Q425 151 448 140" fill="#78ac77"/><path d="M448 150 Q462 127 464 139 Q460 155 448 150" fill="#80b17d"/><g transform="translate(445 99)"><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f3c2dd" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f3c2dd" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f3c2dd" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f3c2dd" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f3c2dd" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="4.6" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><g class="bot-flower" style="animation-delay:-2.87s"><path d="M516 160 Q508 116 516 80" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M513 128 Q497 109 494 121 Q496 139 513 128" fill="#78ac77"/><path d="M513 138 Q533 115 535 127 Q531 143 513 138" fill="#80b17d"/><g transform="translate(516 77)"><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#ffe7a3" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#ffe7a3" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#ffe7a3" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#ffe7a3" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-9.4" rx="7.0" ry="12.0" fill="#ffe7a3" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="5.5" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><g class="bot-flower" style="animation-delay:-3.28s"><path d="M582 160 Q591 133 582 105" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M585 145 Q563 126 560 138 Q562 156 585 145" fill="#78ac77"/><path d="M585 155 Q599 132 601 144 Q597 160 585 155" fill="#80b17d"/><g transform="translate(582 102)"><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fffaf1" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fffaf1" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fffaf1" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fffaf1" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-10.9" rx="8.1" ry="14.0" fill="#fffaf1" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="6.4" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><g class="bot-flower" style="animation-delay:-3.69s"><path d="M651 160 Q643 116 651 83" fill="none" stroke="#417950" stroke-width="3.3" stroke-linecap="round"/><path d="M648 128 Q632 109 629 121 Q631 139 648 128" fill="#78ac77"/><path d="M648 138 Q668 115 670 127 Q666 143 648 138" fill="#80b17d"/><g transform="translate(651 80)"><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2abb7" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(0)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2abb7" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(72)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2abb7" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(144)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2abb7" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(216)"/><ellipse cx="0" cy="-7.8" rx="5.8" ry="10.0" fill="#f2abb7" stroke="#fffaf2" stroke-opacity=".34" stroke-width=".6" transform="rotate(288)"/><circle r="4.6" fill="#efd27a"/><circle cx="-2" cy="-2" r="1.7" fill="#fff7d2" opacity=".8"/></g></g><circle cx="434" cy="123" r="2.5" fill="#ffebc6" opacity=".76"/><circle cx="16" cy="138" r="1.8" fill="#e6f0c9" opacity=".76"/><circle cx="51" cy="132" r="3.1" fill="#f2c2bf" opacity=".76"/><circle cx="178" cy="148" r="3.1" fill="#fffcef" opacity=".76"/><circle cx="476" cy="148" r="1.8" fill="#ffebc6" opacity=".76"/><circle cx="512" cy="148" r="3.1" fill="#e6f0c9" opacity=".76"/><circle cx="425" cy="149" r="3.1" fill="#f2c2bf" opacity=".76"/><circle cx="534" cy="121" r="2.5" fill="#fffcef" opacity=".76"/><circle cx="279" cy="137" r="1.8" fill="#ffebc6" opacity=".76"/><circle cx="9" cy="132" r="1.8" fill="#e6f0c9" opacity=".76"/><circle cx="429" cy="158" r="2.5" fill="#f2c2bf" opacity=".76"/><circle cx="272" cy="148" r="2.5" fill="#fffcef" opacity=".76"/><circle cx="434" cy="159" r="3.1" fill="#ffebc6" opacity=".76"/><circle cx="25" cy="154" r="2.5" fill="#e6f0c9" opacity=".76"/><circle cx="332" cy="148" r="3.1" fill="#f2c2bf" opacity=".76"/><circle cx="545" cy="123" r="2.5" fill="#fffcef" opacity=".76"/><circle cx="599" cy="148" r="3.1" fill="#ffebc6" opacity=".76"/><circle cx="471" cy="121" r="2.5" fill="#e6f0c9" opacity=".76"/><circle cx="652" cy="135" r="3.1" fill="#f2c2bf" opacity=".76"/><circle cx="464" cy="153" r="3.1" fill="#fffcef" opacity=".76"/><circle cx="421" cy="134" r="2.5" fill="#ffebc6" opacity=".76"/><circle cx="142" cy="149" r="2.5" fill="#e6f0c9" opacity=".76"/><circle cx="664" cy="126" r="2.5" fill="#f2c2bf" opacity=".76"/><circle cx="461" cy="140" r="1.8" fill="#fffcef" opacity=".76"/><circle cx="114" cy="148" r="1.8" fill="#ffebc6" opacity=".76"/><circle cx="525" cy="146" r="3.1" fill="#e6f0c9" opacity=".76"/></svg><span class="ff-twinkle t1">✦</span><span class="ff-twinkle t2">✧</span><span class="ff-twinkle t3">✦</span><span class="ff-drift-butterfly" aria-hidden="true">🦋</span><span class="ff-drift-butterfly second" aria-hidden="true">🦋</span><div class="firefly-hint" id="fireflyHint">Toca y deja que el cielo se llene poquito a poquito.</div></div><div class="firefly-actions"><button class="button button-primary" type="button" id="releaseFirefly">Soltar una luciérnaga</button><button class="button button-outline" type="button" id="releaseMany">Llenar el cielo</button></div><div class="tiny-caption" id="fireflyCount">Todavía no has soltado ninguna lucecita.</div></div>
+        <div class="sky-panel"><span class="care-icon">☁️</span><h3>Si algo pesa, suéltalo al viento</h3><p>Puedes escribir una preocupación, una frase suelta o una idea que te esté rondando. No se guarda ni se envía a nadie.</p><textarea class="cloud-input" id="cloudInput" maxlength="220" placeholder="Hoy me gustaría dejar ir esto un ratito..."></textarea><div class="journal-controls"><button class="button button-primary" type="button" id="sendCloud">Mandarlo al viento</button><button class="button button-outline" type="button" id="clearCloud">Borrar</button></div><div class="cloud-scene" id="cloudScene"><div class="cloud-placeholder" id="cloudPlaceholder">Tus palabras pueden descansar un ratito aquí. ☁️</div></div><div class="tiny-caption">Tu texto se usa solo para esta animación y no se envía a ningún sitio.</div></div>
+      </div>
+    </section>
+
+    <section class="closing wrap" aria-label="Dedicatoria"><span class="closing-icon">🧸</span><h2>Y si hoy no fue tu mejor día…</h2><p>Está bien. Mañana será otra oportunidad. Por ahora, descansa un poquito, Noe. Ojalá este lugar te haya regalado una sonrisa, aunque sea pequeñita.</p><p class="signature">Con cariño, <span>Chris ♡</span></p></section>
+  </main>
+  <footer class="footer">Hecho con calma, para que lo disfrutes a tu manera. 🌷 <span style="display:block;font-size:10px;opacity:.6;margin-top:8px">Esta página registra visitas anónimas. Tus notas no se comparten.</span></footer>
+
+  <div class="letter-modal hidden" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalText"><div class="modal-scrim" id="modalScrim"></div><div class="modal-card" tabindex="-1" id="modalCard"><button class="modal-close" id="closeLetter" type="button" aria-label="Cerrar carta">×</button><div id="modalIcon" class="modal-icon">✉️</div><span class="modal-tag">UNA CARTITA PARA TI</span><h2 id="modalTitle"></h2><p id="modalText"></p><div class="modal-bottom"><span>Para Noe, con cariño ♡</span><button type="button" class="button button-primary" id="anotherLetter">Otra carta →</button></div></div></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script>
+'use strict';
+
+// CONTADOR PRIVADO PARA EL DUEÑO DEL SITIO
+// Cambia TU-CODIGO por el subdominio de tu cuenta real de GoatCounter.
+// El contador NO aparece en la pantalla de Noelia.
+// Solo registra visitas de página: no registra los textos que se escriban aquí.
+const GOATCOUNTER_URL = 'https://TU-CODIGO.goatcounter.com/count';
+if (!GOATCOUNTER_URL.includes('TU-CODIGO') && /^https:\/\/[a-z0-9.-]+\.goatcounter\.com\/count$/.test(GOATCOUNTER_URL)) {
+  const counterScript = document.createElement('script');
+  counterScript.async = true;
+  counterScript.src = 'https://gc.zgo.at/count.js';
+  counterScript.dataset.goatcounter = GOATCOUNTER_URL;
+  document.head.appendChild(counterScript);
+}
+
+const $ = id => document.getElementById(id);
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let toastTimer;
+function toast(message) {
+  const el = $('toast');
+  el.textContent = message;
+  el.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove('show'), 2700);
+}
+function getSaved(key, defaultVal) {
+  try { const value = localStorage.getItem(key); return value === null ? defaultVal : JSON.parse(value); }
+  catch { return defaultVal; }
+}
+function setSaved(key, value) {
+  try { localStorage.setItem(key, JSON.stringify(value)); return true; }
+  catch { return false; }
+}
+
+// Atardecer sin descargar imágenes ni reiniciar.
+const lightToggle = $('lightToggle');
+let sunset = getSaved('noe-sunset-v1', false) === true;
+function updateSunset() {
+  document.body.classList.toggle('sunset', sunset);
+  lightToggle.setAttribute('aria-pressed', String(sunset));
+  lightToggle.setAttribute('aria-label', sunset ? 'Volver al día' : 'Cambiar a atardecer');
+  lightToggle.querySelector('span').textContent = sunset ? '☀️' : '🌅';
+  document.querySelector('meta[name="theme-color"]').setAttribute('content', sunset ? '#d6bfd3' : '#dceef4');
+}
+updateSunset();
+lightToggle.addEventListener('click', () => {
+  sunset = !sunset;
+  setSaved('noe-sunset-v1', sunset);
+  updateSunset();
+  toast(sunset ? 'Un atardecer para descansar la mirada 🌅' : '¡Buenos días, pradera! ☀️');
+});
+
+// Osito: respiración real en el tiempo (4 s inhalar, 6 s exhalar).
+const meadowStage = $('meadowStage');
+let breathStarted = false;
+let breathInterval;
+let breathEpoch;
+function updateBreath() {
+  if (!breathStarted) return;
+  const sec = (performance.now() - breathEpoch) / 1000;
+  const phase = sec % 10;
+  const inhale = phase < 4;
+  const remaining = Math.ceil(inhale ? 4 - phase : 10 - phase);
+  $('breathTitle').textContent = inhale ? 'Inhala suavemente · ' + remaining + ' s' : 'Exhala despacio · ' + remaining + ' s';
+  $('breathHint').textContent = inhale ? 'Deja entrar el aire sin forzarte.' : 'Afloja los hombros. No tienes que apresurarte.';
+}
+function stopBreath() {
+  clearInterval(breathInterval);
+  breathInterval = null;
+  breathStarted = false;
+  meadowStage.classList.remove('is-breathing');
+  $('breathTitle').textContent = 'Un respiro contigo';
+  $('breathHint').textContent = 'El osito puede respirar a tu ritmo: 4 segundos al inhalar y 6 al exhalar.';
+  $('breathStart').classList.remove('hidden');
+  $('breathStop').classList.add('hidden');
+}
+$('breathStart').addEventListener('click', () => {
+  stopBreath();
+  breathStarted = true;
+  breathEpoch = performance.now();
+  meadowStage.classList.add('is-breathing');
+  $('breathStart').classList.add('hidden');
+  $('breathStop').classList.remove('hidden');
+  updateBreath();
+  breathInterval = setInterval(updateBreath, 200);
+  toast('Si el ritmo no te acomoda, respira a tu manera. ♡');
+});
+$('breathStop').addEventListener('click', stopBreath);
+document.addEventListener('visibilitychange', () => { if (document.hidden) stopBreath(); });
+
+// Interacción con el osito y flores.
+const hugs = [
+  'Un abrazo enorme para ti, Noe. 🧸',
+  'El osito dice: descansa un poquito. ♡',
+  'No hay prisa. Aquí estamos bien. 🌿',
+  'Se vale sonreír sin tener un motivo. ✨',
+  'El osito está feliz de verte por aquí. 🌼'
+];
+let hugIndex = 0;
+function floatSymbol(target, symbol) {
+  if (reducedMotion) return;
+  const rect = target.getBoundingClientRect();
+  const stageRect = meadowStage.getBoundingClientRect();
+  const leaf = document.createElement('span');
+  leaf.className = 'float-heart';
+  leaf.textContent = symbol;
+  leaf.style.left = (rect.left - stageRect.left + rect.width * (.25 + Math.random() * .5)) + 'px';
+  leaf.style.top = (rect.top - stageRect.top + rect.height * .35) + 'px';
+  leaf.style.setProperty('--dx', `${Math.round(Math.random() * 90 - 45)}px`);
+  meadowStage.appendChild(leaf);
+  setTimeout(() => leaf.remove(), 1250);
+}
+$('bearHug').addEventListener('click', () => {
+  $('hugMessage').textContent = hugs[hugIndex++ % hugs.length];
+  ['♡', '✨', '♡'].forEach((s, i) => setTimeout(() => floatSymbol($('bearHug'), s), i * 125));
+});
+const bloomNotes = [
+  'Las cosas bonitas también pueden ser pequeñas. 🌼',
+  'Una flor para ti. Sin motivo, porque sí. ♡',
+  'No te olvides de disfrutar los ratitos suaves.',
+  'Una flor no se apura para crecer. Tú tampoco.',
+  'Hoy te mereces un poco de ternura. 🌸'
+];
+let bloomIndex = 0;
+document.querySelectorAll('.meadow-flower').forEach(btn => {
+  btn.addEventListener('click', () => {
+    floatSymbol(btn, btn.dataset.flower);
+    toast(bloomNotes[bloomIndex++ % bloomNotes.length]);
+  });
+});
+
+// Sonido sintetizado en tiempo real: suave brisa + notas ambientales sin MP3 ni servicios externos.
+let audioContext, audioMaster, musicActive = false, ambience, melodyInterval, wobbleInterval;
+let chordIndex = 0;
+const musicButton = $('soundToggle');
+function startTone(freq, duration, volume, type = 'sine') {
+  if (!audioContext || !musicActive) return;
+  const t = audioContext.currentTime;
+  const osc = audioContext.createOscillator();
+  const envelope = audioContext.createGain();
+  osc.type = type;
+  osc.frequency.setValueAtTime(freq, t);
+  envelope.gain.setValueAtTime(.0001, t);
+  envelope.gain.exponentialRampToValueAtTime(volume, t + Math.min(1.6, duration * .38));
+  envelope.gain.exponentialRampToValueAtTime(.0001, t + duration);
+  osc.connect(envelope);
+  envelope.connect(audioMaster);
+  osc.start(t);
+  osc.stop(t + duration + .05);
+}
+const chords = [[261.63,329.63,392.00], [220,261.63,329.63], [196,246.94,329.63], [174.61,261.63,349.23]];
+function playChords() {
+  const chord = chords[chordIndex++ % chords.length];
+  chord.forEach((note, i) => startTone(note / 2, 9.6, .017, 'sine'));
+  startTone(chord[(chordIndex + 1) % 3], 2.4, .021);
+}
+async function setMusic(enabled) {
+  if (!enabled) {
+    musicActive = false;
+    clearInterval(melodyInterval);
+    clearInterval(wobbleInterval);
+    if (audioContext && audioMaster) audioMaster.gain.setTargetAtTime(.0001, audioContext.currentTime, .12);
+    musicButton.setAttribute('aria-pressed', 'false');
+    $('soundIcon').textContent = '♫';
+    $('soundText').textContent = 'Música suave';
+    return;
+  }
+  try {
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) throw new Error('Web Audio no disponible');
+    if (!audioContext) {
+      audioContext = new AC();
+      audioMaster = audioContext.createGain();
+      audioMaster.gain.value = .0001;
+      audioMaster.connect(audioContext.destination);
+      const buffer = audioContext.createBuffer(1, audioContext.sampleRate * 3, audioContext.sampleRate);
+      const channel = buffer.getChannelData(0);
+      let previous = 0;
+      for (let i = 0; i < channel.length; i++) {
+        const white = Math.random() * 2 - 1;
+        previous = (previous + .017 * white) / 1.017;
+        channel[i] = previous * 3.2;
+      }
+      const source = audioContext.createBufferSource();
+      source.buffer = buffer;
+      source.loop = true;
+      const filter = audioContext.createBiquadFilter();
+      filter.type = 'lowpass';
+      filter.frequency.value = 480;
+      ambience = audioContext.createGain();
+      ambience.gain.value = .23;
+      source.connect(filter).connect(ambience).connect(audioMaster);
+      source.start();
+    }
+    await audioContext.resume();
+    musicActive = true;
+    audioMaster.gain.setTargetAtTime(.17, audioContext.currentTime, .4);
+    musicButton.setAttribute('aria-pressed', 'true');
+    $('soundIcon').textContent = '♪';
+    $('soundText').textContent = 'Apagar música';
+    playChords();
+    melodyInterval = setInterval(playChords, 8500);
+    wobbleInterval = setInterval(() => {
+      if (!musicActive) return;
+      const scale = [523.25,587.33,659.25,783.99,880];
+      startTone(scale[Math.floor(Math.random() * scale.length)], 2.2, .015, 'sine');
+    }, 4500);
+    toast('La música se puede apagar cuando quieras. ♫');
+  } catch (err) {
+    musicActive = false;
+    toast('Este navegador no pudo reproducir el ambiente.');
+  }
+}
+musicButton.addEventListener('click', () => { void setMusic(!musicActive); });
+window.addEventListener('pagehide', () => { if (musicActive) void setMusic(false); stopBreath(); });
+
+// Jardín de 24 cartas libres, ninguna depende de una fecha.
+const letters = [
+  { icon:'🌷', title:'Para un día difícil', color:'#f6d4cf', text:'Noe, si hoy las cosas se sintieron demasiado grandes, no tienes que resolverlas todas antes de dormir. Puedes elegir una, la más pequeñita, y dejar las demás para otro momento. A veces cuidarse es aceptar que ya hiciste suficiente por hoy.' },
+  { icon:'☁️', title:'Cuando todo se acumule', color:'#dce9f4', text:'Sé que a veces quisieras solucionar mil cosas al mismo tiempo. Pero nadie tiene que llevar todo en las manos sin que se le caiga algo. Ve por partes, con calma. Incluso un paso pequeño sigue siendo un paso.' },
+  { icon:'🧸', title:'Un abrazo de osito', color:'#f4dfc6', text:'Si pudiera, pondría a este osito a darte un abrazo de esos que no necesitan explicaciones. De momento, aquí tienes uno imaginario: suave, sin preguntas y sin apuros. Que tu corazón encuentre un ratito tranquilo.' },
+  { icon:'🌙', title:'Para antes de dormir', color:'#e3def0', text:'Ojalá puedas acostarte sin repasar una y otra vez todo lo que pasó hoy. Algunas respuestas se encuentran mejor después de descansar. Por esta noche no necesitas ganar ninguna batalla, Noe. Solo dormir un poquito mejor.' },
+  { icon:'🌼', title:'Por lo que vales', color:'#faedb8', text:'Tu valor no depende de que otros lo reconozcan, ni de que siempre tengas la respuesta correcta. Está ahí en los días fáciles y también en los que dudas de ti. No dejes que una situación difícil te haga olvidarlo.' },
+  { icon:'🦋', title:'Cuando algo cambie', color:'#dfe8fb', text:'A veces los cambios nos dan miedo porque no sabemos qué viene después. Pero cambiar de rumbo no significa que hayas fallado. Puedes aprender, volver a intentarlo y darte permiso de empezar distinto.' },
+  { icon:'🍵', title:'Un descansito', color:'#e2eedc', text:'Aviso importante del jardín: se ha autorizado una pausa para tomar agua, mover un poquito los hombros y escuchar una canción que te guste. No hay que justificar este descansito. Ya estabas haciendo bastante.' },
+  { icon:'⭐', title:'Para confiar en ti', color:'#f7e2b7', text:'Te he leído hablar de aprender a tener paciencia y de hacer las cosas con más calma. Eso también es fortaleza: reconocer qué quieres mejorar y decidir intentarlo. No tienes que cambiar de golpe para estar avanzando.' },
+  { icon:'🌻', title:'Una sonrisa', color:'#ffebba', text:'El osito de la pradera convocó una reunión urgente. Orden del día: respirar, aflojar la frente, comer algo rico cuando puedas y recordar que descansar no está prohibido. La reunión terminó con aplausos de las flores. 🌼' },
+  { icon:'💌', title:'Cuando te sientas sola', color:'#f4d7d8', text:'A veces cuesta contar lo que duele, y está bien reservarte cosas hasta sentirte lista. No tienes que explicarlo todo para merecer compañía. Si algún día quieres conversar, distraerte o simplemente contar una tontería, me dará gusto escucharte.' },
+  { icon:'🍃', title:'Para soltar un poquito', color:'#dcefdc', text:'Hay cosas que están fuera de nuestras manos, por más que intentemos acomodarlas. Soltar no siempre es rendirse; a veces es decidir que tu paz también importa. Puedes cuidar de ti mientras el resto encuentra su lugar.' },
+  { icon:'🐻', title:'Cuando te equivoques', color:'#e9d7c7', text:'Un error no resume quién eres. A veces una decisión sale mal y aun así podemos aprender de ella. Háblate con la paciencia que le regalarías a una amiga querida. Tú también la mereces.' },
+  { icon:'🌤️', title:'Para una mañana nueva', color:'#daebf1', text:'Ojalá hoy tengas algún momento sencillito que te alegre: una canción, una charla tranquila, el aire fresco o tu comida favorita. No todos los días tienen que ser extraordinarios para guardar algo bonito.' },
+  { icon:'🪻', title:'Cuando haya muchas dudas', color:'#e6dff2', text:'No tener todas las respuestas ahora no significa que estés perdida. Puedes preguntar, esperar, cambiar de opinión y tomarte el tiempo que necesites. Una decisión pensada con calma también es una forma de quererte.' },
+  { icon:'🐞', title:'Un logro pequeñito', color:'#f4e2d8', text:'Si hoy te levantaste, fuiste a trabajar, avanzaste en tus estudios o simplemente seguiste adelante, eso cuenta. No minimices los esfuerzos invisibles. Algunas victorias son silenciosas, pero siguen siendo tuyas.' },
+  { icon:'🌧️', title:'Si hoy lloraste', color:'#d8e8f4', text:'No tienes que pedir perdón por sentir. Llorar no borra tu fuerza ni significa que retrocediste. Ojalá después puedas darte agua, descanso y un poquito de cariño. También mereces eso en tus días difíciles.' },
+  { icon:'🌱', title:'A tu propio ritmo', color:'#dbecce', text:'Mira una plantita: no crece más rápido porque alguien la apure. Necesita luz, agua y tiempo. Contigo pasa algo parecido. Avanza a tu manera y reconoce cuánto has logrado, aunque todavía falte camino.' },
+  { icon:'☀️', title:'Cuando salga el sol', color:'#f9e5b9', text:'Que una noche haya sido complicada no significa que todos los días serán iguales. Quizá mañana siga habiendo pendientes, pero también habrá posibilidades nuevas. Y una de ellas puede ser darte un comienzo más amable.' },
+  { icon:'🎈', title:'Un ratito ligero', color:'#f6d9e9', text:'Una idea por si necesitas distraerte: elige una canción bonita, abre una ventana y busca tres cosas de tu color favorito. Parece pequeño, pero los momentos de calma no tienen que ser grandes para sentirse bien.' },
+  { icon:'💗', title:'Cuando dudes de tu valor', color:'#f7d8df', text:'No dejes que los comentarios ajenos decidan cómo debes mirarte. Eres mucho más que los problemas que te han tocado vivir. Tu manera de aprender, tu esfuerzo y tus ganas de salir adelante merecen respeto.' },
+  { icon:'🫧', title:'Una respiración', color:'#d8edf0', text:'Afloja un poquito la mandíbula. Baja los hombros. Siente tus pies apoyados y deja salir el aire más despacio de lo que entró. No tienes que hacerlo perfecto. Solo regálate unos segundos aquí, en este momento.' },
+  { icon:'🍓', title:'Algo bonito porque sí', color:'#fae0dc', text:'No necesitas estar triste para merecer algo bonito. Este mensaje también es para los días en que te sientes bien: ojalá puedas reír, disfrutar y guardar recuerdos agradables sin esperar una razón especial.' },
+  { icon:'✨', title:'Para seguir intentando', color:'#e8e5f6', text:'A veces avanzar se parece mucho a empezar de nuevo. Y está bien. No te midas solo por lo que falta; también mira lo que ya aprendiste, las cosas que superaste y las decisiones que hoy tomarías de otra manera.' },
+  { icon:'🤍', title:'Una nota de Chris', color:'#f5e6da', text:'Noe, hice este pequeño lugar porque un día te escuché decir que a veces todo se te junta y quisieras resolverlo de inmediato. Me quedé pensando en eso. Ojalá, cuando entres aquí, encuentres un respiro y recuerdes que puedes ir paso a paso. No tienes que responder nada; solo quería regalarte algo bonito.' }
+];
+const letterGrid = $('letterGrid');
+letters.forEach((letter, index) => {
+  const tile = document.createElement('button');
+  tile.type = 'button';
+  tile.className = 'letter-tile';
+  tile.style.setProperty('--tile-color', letter.color);
+  tile.setAttribute('aria-label', 'Abrir carta: ' + letter.title);
+  const icon = document.createElement('span');
+  icon.className = 'tile-icon';
+  icon.setAttribute('aria-hidden', 'true');
+  icon.textContent = letter.icon;
+  const title = document.createElement('span');
+  title.className = 'tile-label';
+  title.textContent = letter.title;
+  const hint = document.createElement('span');
+  hint.className = 'tile-action';
+  hint.textContent = 'TOCA PARA ABRIR ↗';
+  tile.append(icon,title,hint);
+  tile.addEventListener('click', () => openLetter(index));
+  letterGrid.appendChild(tile);
+});
+let lastFocus = null;
+let currentLetterIndex = 0;
+const letterModal = $('letterModal');
+function openLetter(index) {
+  currentLetterIndex = index;
+  lastFocus = document.activeElement;
+  const letter = letters[index];
+  $('modalIcon').textContent = letter.icon;
+  $('modalTitle').textContent = letter.title;
+  $('modalText').textContent = letter.text;
+  letterModal.classList.remove('hidden');
+  document.body.classList.add('modal-open');
+  $('modalCard').scrollTop = 0;
+  $('closeLetter').focus();
+}
+function closeLetter() {
+  letterModal.classList.add('hidden');
+  document.body.classList.remove('modal-open');
+  if (lastFocus && lastFocus.isConnected) lastFocus.focus();
+}
+$('closeLetter').addEventListener('click', closeLetter);
+$('modalScrim').addEventListener('click', closeLetter);
+function differentLetter() {
+  let index = Math.floor(Math.random() * letters.length);
+  if (index === currentLetterIndex) index = (index + 1) % letters.length;
+  return index;
+}
+$('anotherLetter').addEventListener('click', () => {
+  const index = differentLetter();
+  currentLetterIndex = index;
+  const letter = letters[index];
+  $('modalIcon').textContent = letter.icon;
+  $('modalTitle').textContent = letter.title;
+  $('modalText').textContent = letter.text;
+  $('modalCard').scrollTop = 0;
+});
+$('surpriseLetter').addEventListener('click', () => openLetter(differentLetter()));
+document.addEventListener('keydown', event => {
+  if (letterModal.classList.contains('hidden')) return;
+  if (event.key === 'Escape') { closeLetter(); return; }
+  if (event.key !== 'Tab') return;
+  const focusable = [...letterModal.querySelectorAll('button:not([disabled])')].filter(el => el.offsetParent !== null);
+  if (!focusable.length) return;
+  const first = focusable[0], last = focusable[focusable.length-1];
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+});
+
+// Mensajes para cuatro momentos, sin clasificar a Noelia por una condición.
+const moods = {
+  ansiosa: [
+    'Un pensamiento no es una obligación. Si tu mente está corriendo, puedes hacer una pausa y elegir una sola cosa.',
+    'No necesitas descubrir hoy cómo se resolverá todo. Por ahora, respira y vuelve al momento presente.',
+    'Las cosas pueden esperar un minuto. Tu tranquilidad también merece un espacio.',
+    'Hay días en los que hacer menos y hacerlo despacito es exactamente lo que necesitas.'
+  ],
+  triste: [
+    'Que hoy estés triste no significa que siempre vaya a sentirse así. Date permiso de vivir el día con suavidad.',
+    'Noe, no tienes que fingir una sonrisa. Aquí puedes estar como estés y seguir mereciendo cariño.',
+    'Si necesitas llorar, está bien. Después, si puedes, haz algo amable por ti.',
+    'Una nube no borra el cielo. Un día difícil tampoco borra todo lo bueno que hay en ti.'
+  ],
+  cansada: [
+    'Has hecho bastante por hoy. Ojalá puedas regalarte un descanso sin sentir que tienes que ganártelo.',
+    'No todo pendiente es urgente. Tu cuerpo y tu mente también necesitan ser escuchados.',
+    'Respirar, comer, dormir y parar un ratito también son cosas importantes.',
+    'Que estés agotada no dice nada malo de ti. Quizá solo llevas demasiado encima.'
+  ],
+  bien: [
+    'Qué bonito que hoy puedas sentirte un poquito mejor. Disfruta ese momento sin buscarle explicaciones.',
+    'Guarda lo bueno de hoy en algún rincón de tu memoria. También mereces días ligeros.',
+    'Una sonrisa pequeña es una buena noticia. El osito celebra contigo. 🧸',
+    'No olvides que mereces momentos de tranquilidad también cuando todo va bien.'
+  ]
+};
+let moodName='ansiosa', moodIndex=0;
+function drawMood() { $('moodMessage').textContent=moods[moodName][moodIndex]; }
+document.querySelectorAll('.mood-chip').forEach(btn => btn.addEventListener('click', () => {
+  moodName=btn.dataset.mood;
+  moodIndex=0;
+  document.querySelectorAll('.mood-chip').forEach(chip=>{
+    const selected = chip === btn;
+    chip.classList.toggle('selected',selected);
+    chip.setAttribute('aria-pressed',String(selected));
+  });
+  drawMood();
+}));
+$('nextMood').addEventListener('click', () => { moodIndex=(moodIndex+1)%moods[moodName].length;drawMood(); });
+drawMood();
+
+// Recorrido 5-4-3-2-1: 15 toques, sin velocidad objetivo ni puntuación.
+const sensoryStages = [
+  {n:5, name:'Cosas que puedes ver', help:'Mira a tu alrededor y elige una.'},
+  {n:4, name:'Cosas que puedes sentir', help:'La ropa, el suelo o algo que tengas cerca.'},
+  {n:3, name:'Sonidos que puedes escuchar', help:'Aunque sean pequeños o lejanos.'},
+  {n:2, name:'Olores que puedes notar', help:'Si no hay ninguno, recuerda dos aromas que te gusten.'},
+  {n:1, name:'Sabor que puedes notar', help:'También puedes recordar el sabor de algo rico.'}
+];
+let sensoryIndex=0, sensoryProgress=0;
+function renderSensory() {
+  const done = sensoryStages.slice(0,sensoryIndex).reduce((total,stage)=>total+stage.n,0)+sensoryProgress;
+  const steps = $('groundProgress');
+  steps.replaceChildren();
+  for(let i=0;i<15;i++) { const dot=document.createElement('span'); dot.className=i<done?'done':'';steps.appendChild(dot); }
+  if(sensoryIndex>=sensoryStages.length){
+    $('groundNumber').textContent='♡';
+    $('groundTitle').textContent='Aquí estás. Lo hiciste a tu ritmo.';
+    $('groundHelp').textContent='Toma un momento para notar cómo te sientes ahora.';
+    $('groundNext').textContent='Volver a empezar ↻';
+    return;
+  }
+  const stage=sensoryStages[sensoryIndex];
+  $('groundNumber').textContent=stage.n-sensoryProgress;
+  $('groundTitle').textContent=stage.name;
+  $('groundHelp').textContent=stage.help;
+  $('groundNext').textContent='Encontré una ✨';
+}
+$('groundNext').addEventListener('click',()=>{
+  if(sensoryIndex>=sensoryStages.length){sensoryIndex=0;sensoryProgress=0;renderSensory();return;}
+  sensoryProgress++;
+  if(sensoryProgress>=sensoryStages[sensoryIndex].n){sensoryProgress=0;sensoryIndex++;}
+  renderSensory();
+  if(sensoryIndex===sensoryStages.length) toast('Un momento contigo. Eso también importa. 🤍');
+});
+$('groundReset').addEventListener('click',()=>{sensoryIndex=0;sensoryProgress=0;renderSensory();});
+renderSensory();
+
+// Flor de cuatro toques, guardada en el mismo navegador.
+let flowerLevel = Math.min(4, Math.max(0, Number(getSaved('noe-flower-level-v1',0))||0));
+const flowerLines=[
+  'Hasta las flores crecen a su ritmo.',
+  'Un poquito de agua… y un poquito de paciencia.',
+  'Mira, ya salió una hoja. Así empiezan muchas cosas buenas.',
+  'Una segunda hojita. No hace falta apresurar nada.',
+  '¡Floreció! Qué lindo lo que puede pasar cuando nos damos tiempo. 🌷'
+];
+function drawFlower(){ $('growingPlant').dataset.level=String(flowerLevel);$('gardenMessage').textContent=flowerLines[flowerLevel];$('growFlower').textContent=flowerLevel===4?'Regar otra vez 💧':'Regar un poquito 💧'; }
+$('growFlower').addEventListener('click',()=>{
+  flowerLevel=flowerLevel===4?0:flowerLevel+1;
+  setSaved('noe-flower-level-v1',flowerLevel);
+  drawFlower();
+  if(flowerLevel===4) toast('Tu florecita creció. 🌷');
+});
+$('resetGarden').addEventListener('click',()=>{flowerLevel=0;setSaved('noe-flower-level-v1',0);drawFlower();});
+drawFlower();
+
+// Diario local: evita enviar texto a servidores. No hacemos analítica de entradas.
+const journalKey='noe-private-notes-v1';
+let journalNotes=getSaved(journalKey,[]);
+if(!Array.isArray(journalNotes))journalNotes=[];
+journalNotes=journalNotes.filter(n=>n&&typeof n.text==='string'&&typeof n.id==='string').slice(0,20);
+function renderJournal(){
+  $('savedNotes').replaceChildren();
+  journalNotes.forEach(note=>{
+    const item=document.createElement('div'); item.className='saved-note';
+    const body=document.createElement('span');body.textContent=note.text;
+    const del=document.createElement('button');del.type='button';del.textContent='Borrar';del.setAttribute('aria-label','Borrar esta nota privada');
+    del.addEventListener('click',()=>{
+      journalNotes=journalNotes.filter(n=>n.id!==note.id);
+      setSaved(journalKey,journalNotes);
+      renderJournal();
+      $('journalStatus').textContent='La nota fue borrada de este navegador.';
+    });
+    item.append(body,del);$('savedNotes').appendChild(item);
+  });
+}
+$('saveNote').addEventListener('click',()=>{
+  const value=$('journalInput').value.trim();
+  if(!value){toast('Puedes escribir algo, aunque sea una palabra.');$('journalInput').focus();return;}
+  const note={id:`${Date.now()}-${Math.random().toString(36).slice(2,8)}`,text:value};
+  const candidate=[note,...journalNotes].slice(0,20);
+  if(setSaved(journalKey,candidate)){
+    journalNotes=candidate;$('journalInput').value='';renderJournal();
+    $('journalStatus').textContent='Guardado solo en este navegador. Puedes borrarlo cuando quieras.';
+    toast('Tu notita quedó guardada aquí. ♡');
+  }else $('journalStatus').textContent='No se pudo guardar en este navegador. Puedes copiar tus palabras antes de salir.';
+});
+$('releaseNote').addEventListener('click',()=>{
+  if(!$('journalInput').value.trim()){toast('Si quieres, escribe algo antes de soltarlo.');return;}
+  $('journalInput').value='';
+  $('journalStatus').textContent='Lo dejaste ir por hoy. Respira suavemente. 🍃';
+  toast('A veces escribir y soltar también ayuda. 🍃');
+});
+
+// Canastita de cositas lindas
+const pocketItems = [
+  {icon:'🌷',label:'Florcita',text:'Si hoy todo se siente mucho, no pasa nada por ir despacito. Incluso una florecita crece sin prisa.'},
+  {icon:'🍵',label:'Tacita',text:'Una pausa chiquita también cuenta. Agua, té o solo sentarte dos minutos ya es cuidarte.'},
+  {icon:'☁️',label:'Nubecita',text:'No tienes que aclarar todo hoy. A veces basta con dejar que el cielo se acomode solo.'},
+  {icon:'🧸',label:'Osito',text:'Imagina un abracito tranquilo y tibiecito. No resuelve todo, pero acompaña bonito.'},
+  {icon:'🦋',label:'Mariposa',text:'Las cosas cambian poco a poco. Incluso los días raros terminan moviéndose.'},
+  {icon:'🎵',label:'Canción',text:'Una canción suave puede ser como abrir la ventana y dejar entrar airecito nuevo.'},
+  {icon:'🌙',label:'Lunita',text:'No por ser de noche tienes que tener todas las respuestas. También puedes solo descansar.'},
+  {icon:'📖',label:'Página',text:'Tu historia no se define por un momento difícil. Eres mucho más grande que este día.'},
+  {icon:'🍃',label:'Hojita',text:'Respira hondo. Inhala suavidad. Exhala la exigencia de tener que poder con todo.'},
+  {icon:'✨',label:'Brillito',text:'A veces el milagro del día es apenas sentirse un poquito menos pesada. Y eso ya vale mucho.'},
+  {icon:'🪞',label:'Espejito',text:'No te hables tan duro. La forma en que te miras también puede ser un refugio.'},
+  {icon:'🌼',label:'Margarita',text:'Quizá hoy no necesitas avanzar rápido, sino tratarte con más ternura.'}
+];
+const pocketGrid = $('pocketGrid');
+pocketItems.forEach(item => {
+  const btn = document.createElement('button');
+  btn.type='button';
+  btn.className='pocket-btn';
+  btn.setAttribute('aria-label', item.label);
+  btn.innerHTML = `<span aria-hidden="true">${item.icon}</span><span>${item.label}</span>`;
+  btn.addEventListener('click', ()=>{ $('pocketNote').textContent = item.text; toast(item.label + ' abierto.'); });
+  pocketGrid.appendChild(btn);
+});
+
+// Mimos aleatorios
+const comfortTexts = {
+  hug:[
+    'Abrazo imaginario activado: de esos que no apuran, no juzgan y solo dicen “aquí estoy”.',
+    'Si pudiera, te diría que descanses la cabeza un ratito y sueltes el peso de este momento.',
+    'A veces el mejor abrazo es el que te recuerda que no tienes que arreglarte para merecer cariño.'
+  ],
+  smile:[
+    'Mini misión: mira a tu alrededor e intenta encontrar algo que te parezca bonito, aunque sea pequeñito.',
+    'Sonrisita del día: imagina al osito haciendo un bailecito torpe solo para verte reír.',
+    'Tal vez ahora mismo no haga falta una gran alegría, solo un detalle que te alivie un poquito.'
+  ],
+  reminder:[
+    'Recordatorio bonito: tu valor no desaparece cuando te sientes cansada, confundida o sensible.',
+    'Aunque te cueste verlo, sigues siendo alguien valiosa incluso en los días desordenados.',
+    'Noe, no tienes que resolver todo para seguir siendo importante, buena y digna de cuidado.'
+  ],
+  mission:[
+    'Mini misión suave: afloja los hombros, descruza la mandíbula y respira dos veces más despacio.',
+    'Mini misión suave: deja el celular 30 segundos, mira un punto fijo y vuelve a tu respiración.',
+    'Mini misión suave: tómate un vasito de agua cuando puedas y vuelve aquí después.'
+  ]
+};
+function pick(list){ return list[Math.floor(Math.random()*list.length)]; }
+function showComfort(type){ $('comfortCard').textContent = pick(comfortTexts[type]); }
+$('comfortHug').addEventListener('click', ()=>showComfort('hug'));
+$('comfortSmile').addEventListener('click', ()=>showComfort('smile'));
+$('comfortReminder').addEventListener('click', ()=>showComfort('reminder'));
+$('comfortMission').addEventListener('click', ()=>showComfort('mission'));
+showComfort('hug');
+
+// Gratitud simple
+const gratitudeMessages = {
+  'Un respiro':'Qué bonito que todavía puedas regalarte un respiro. A veces empezar por ahí ya cambia un poquito todo.',
+  'Un rayito de sol':'Hasta un rayito de sol puede recordarte que el día no está peleado contigo completo.',
+  'Tu camita':'Volver a un lugar blandito y seguro también es una forma de sentirse acompañada.',
+  'Una canción':'Las canciones a veces ordenan por dentro lo que todavía no sabemos decir.',
+  'Una persona buena':'Qué fortuna cuando existe alguien amable cerca, aunque sea solo por un ratito.',
+  'Un cafecito':'Las cosas sencillas a veces son las que más sostienen.'
+};
+document.querySelectorAll('.gratitude-chip').forEach(chip => chip.addEventListener('click', ()=>{
+  document.querySelectorAll('.gratitude-chip').forEach(c=>c.classList.toggle('selected', c===chip));
+  $('gratitudeOutput').textContent = gratitudeMessages[chip.textContent] || 'Una cosita pequeña también puede ser un refugio.';
+}));
+
+// Luciérnagas
+let fireflyTotal = 0;
+function spawnFirefly(){
+  const scene = $('fireflyScene');
+  $('fireflyHint').style.display = 'none';
+  const dot = document.createElement('span');
+  dot.className='firefly';
+  const x = 8 + Math.random()*84;
+  const y = 12 + Math.random()*68;
+  dot.style.left = x + '%';
+  dot.style.top = y + '%';
+  dot.style.animationDelay = (-Math.random()*5).toFixed(2) + 's';
+  dot.style.animationDuration = (5 + Math.random()*4).toFixed(2) + 's';
+  scene.appendChild(dot);
+  if (scene.querySelectorAll('.firefly').length > 28) scene.querySelector('.firefly').remove();
+  fireflyTotal++;
+  $('fireflyCount').textContent = fireflyTotal === 1 ? 'Ya soltaste 1 lucecita.' : `Ya soltaste ${fireflyTotal} lucecitas.`;
+}
+$('fireflyScene').addEventListener('click',()=>spawnFirefly());
+$('releaseFirefly').addEventListener('click', ()=>spawnFirefly());
+$('releaseMany').addEventListener('click', ()=>{ for(let i=0;i<8;i++) setTimeout(spawnFirefly, i*120); toast('El cielo se llenó un poquito más. ✨'); });
+
+// Soltar al viento
+$('sendCloud').addEventListener('click', ()=>{
+  const value = $('cloudInput').value.trim();
+  if(!value){ toast('Escribe algo primero, aunque sea poquito.'); $('cloudInput').focus(); return; }
+  $('cloudPlaceholder').style.display='none';
+  const cloud = document.createElement('div');
+  cloud.className='floating-cloud';
+  cloud.textContent = value;
+  cloud.style.left = (Math.random()*18 + 4) + '%';
+  cloud.style.top = (Math.random()*46 + 34) + '%';
+  $('cloudScene').appendChild(cloud);
+  $('cloudInput').value='';
+  toast('Lo mandaste al viento por un ratito. ☁️');
+  setTimeout(()=>cloud.remove(), 18500);
+});
+$('clearCloud').addEventListener('click', ()=>{ $('cloudInput').value=''; toast('Borrado.'); });
+
+renderJournal();
+</script>
+</body>
+</html>
