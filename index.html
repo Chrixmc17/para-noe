@@ -1,6 +1,23 @@
 <!doctype html>
 <html lang="es">
 <head>
+  <script>
+    // Oculta los parámetros UTM que añaden algunas aplicaciones al abrir enlaces.
+    // Mantiene el resto de la URL y no modifica el contador de visitas.
+    (() => {
+      const url = new URL(window.location.href);
+      let changed = false;
+      for (const key of [...url.searchParams.keys()]) {
+        if (/^utm_/i.test(key)) {
+          url.searchParams.delete(key);
+          changed = true;
+        }
+      }
+      if (changed) {
+        window.history.replaceState(window.history.state, "", url.pathname + url.search + url.hash);
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#dceef4">
