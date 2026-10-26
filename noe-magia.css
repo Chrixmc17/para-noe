@@ -129,3 +129,46 @@
  .noe-welcome-bouquet{width:120px;height:130px}
 }
 @media(prefers-reduced-motion:reduce){.noe-welcome-bouquet,.noe-meadow-bouquet,.noe-closing-flowers{animation:none!important}}
+
+
+/* Jardín correcto: una semilla produce UNA rosa, nunca un ramo */
+.garden-drawing .noe-growing-rose{
+  position:absolute!important;
+  left:50%!important;
+  bottom:48px!important;
+  width:min(310px,92%)!important;
+  height:330px!important;
+  transform:translateX(-50%)!important;
+  z-index:3;
+  overflow:visible;
+}
+.noe-growing-rose .noe-rose-life{width:100%;height:100%;display:block;overflow:visible}
+.noe-growing-rose .growth-seed,.noe-growing-rose .growth-sprout,
+.noe-growing-rose .growth-mature,.noe-growing-rose .growth-bud,
+.noe-growing-rose .growth-rose,.noe-growing-rose .growth-glimmer{
+  opacity:0;visibility:hidden;transform-box:fill-box;transform-origin:center bottom;
+  transition:opacity .5s ease,transform 1s cubic-bezier(.2,.8,.25,1),visibility .2s;
+}
+.noe-growing-rose .growth-sprout,.noe-growing-rose .growth-mature{transform:scaleY(.13)}
+.noe-growing-rose .growth-bud,.noe-growing-rose .growth-rose{transform:scale(.2) rotate(-9deg);transform-origin:center 100%}
+.noe-growing-rose[data-level="0"] .growth-seed,
+.noe-growing-rose[data-level="1"] .growth-sprout,
+.noe-growing-rose[data-level="2"] .growth-mature,
+.noe-growing-rose[data-level="3"] .growth-mature,
+.noe-growing-rose[data-level="3"] .growth-bud,
+.noe-growing-rose[data-level="4"] .growth-mature,
+.noe-growing-rose[data-level="4"] .growth-rose,
+.noe-growing-rose[data-level="4"] .growth-glimmer{
+  opacity:1;visibility:visible;transform:scale(1) rotate(0deg);
+}
+.noe-growing-rose[data-level="1"] .growth-sprout,
+.noe-growing-rose[data-level="2"] .growth-mature,
+.noe-growing-rose[data-level="4"] .growth-rose{animation:noeRiseFromSeed 1s ease-out both}
+.noe-growing-rose[data-level="4"] .growth-glimmer{animation:noeRoseGlimmer 2s ease-in-out infinite alternate}
+.garden-drawing .noe-growing-rose .stem,
+.garden-drawing .noe-growing-rose .leaf,
+.garden-drawing .noe-growing-rose .bloom{display:none!important}
+@keyframes noeRiseFromSeed{from{opacity:.3;transform:scale(.42) translateY(18px)}to{opacity:1;transform:scale(1) translateY(0)}}
+@keyframes noeRoseGlimmer{to{opacity:.25}}
+@media(max-width:650px){.garden-drawing .noe-growing-rose{width:min(275px,94%)!important;height:315px!important;bottom:44px!important}}
+@media(prefers-reduced-motion:reduce){.noe-growing-rose .growth-seed,.noe-growing-rose .growth-sprout,.noe-growing-rose .growth-mature,.noe-growing-rose .growth-bud,.noe-growing-rose .growth-rose,.noe-growing-rose .growth-glimmer{animation:none!important;transition:none!important}}
