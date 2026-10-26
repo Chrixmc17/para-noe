@@ -66,12 +66,12 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
 @media(prefers-reduced-motion:reduce){.ff-botanical .bot-flower,.ff-botanical .bot-tuft,.ff-drift-butterfly,.firefly{animation:none!important}}
 
 </style>
-<link rel="stylesheet" href="noe-magia.css?v=20261026-v1">
+<link rel="stylesheet" href="noe-magia.css?v=20261026-floral3">
 </head>
 <body>
 <div class="noe-welcome" id="noeWelcome" role="dialog" aria-modal="true" aria-label="Bienvenida especial para Noe">
  <div class="noe-welcome-card">
-  <div class="noe-welcome-art"><span class="noe-welcome-petal a">🌸</span><span class="noe-welcome-bear">🧸</span><span class="noe-welcome-petal b">🌷</span><span class="noe-welcome-petal c">✨</span></div>
+  <div class="noe-welcome-art"><img class="noe-welcome-bouquet" src="ramito-noelia.svg" alt="Rosas y lirios como los que te gustan"><span class="noe-welcome-petal a">🌸</span><span class="noe-welcome-bear">🧸</span><span class="noe-welcome-petal b">🌷</span><span class="noe-welcome-petal c">✨</span></div>
   <span class="noe-welcome-kicker">Un rincón hecho con cariño</span>
   <h2>Bienvenida a tu <em>jardincito, Noe.</em></h2>
   <p>Hay flores, un osito, unas cartitas y una melodía tranquila que preparé para acompañarte. Puedes recorrerlo a tu ritmo.</p>
@@ -81,7 +81,7 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
 </div>
   <a class="skip-link" href="#principal">Ir al contenido</a>
   <header class="header wrap" aria-label="Encabezado">
-    <a class="brand" href="#inicio" aria-label="Volver al inicio"><span class="brand-bloom">✿</span><span>para Noe <small>un lugar bonito</small></span></a>
+    <a class="brand" href="#inicio" aria-label="Volver al inicio"><span class="brand-bloom"><img src="rosa-noelia.svg" alt="" style="width:38px;height:38px;object-fit:contain"></span><span>para Noe <small>un lugar bonito</small></span></a>
     <div class="header-controls">
       <button id="lightToggle" class="round-control" type="button" aria-pressed="false" aria-label="Cambiar a atardecer" title="Cambiar paisaje"><span aria-hidden="true">🌅</span></button>
       <button id="soundToggle" class="sound-toggle" type="button" aria-pressed="false"><span aria-hidden="true" id="soundIcon">♫</span><span id="soundText">Música suave</span></button>
@@ -170,12 +170,12 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
           </button>
           <div id="hugMessage" class="hug-message" aria-live="polite">Toca al osito. Le encantan los abrazos. ♡</div>
         </div>
-        <button type="button" class="meadow-flower flower-1" aria-label="Tocar una margarita" data-flower="🌼">🌼</button>
-        <button type="button" class="meadow-flower flower-2" aria-label="Tocar una flor rosa" data-flower="🌸">🌸</button>
-        <button type="button" class="meadow-flower flower-3" aria-label="Tocar una flor amarilla" data-flower="🌻">🌻</button>
-        <button type="button" class="meadow-flower flower-4" aria-label="Tocar una flor violeta" data-flower="🌷">🌷</button>
-        <button type="button" class="meadow-flower flower-5" aria-label="Tocar otra margarita" data-flower="🌼">🌼</button>
-        <div class="meadow-instruction">✿ Puedes tocar las flores y al osito ✿</div>
+        <button type="button" class="meadow-flower flower-1 noe-flower-art" aria-label="Tocar flor especial de Noelia" data-flower="🌸"><img src="rosa-noelia.svg" alt="" loading="lazy"></button>
+        <button type="button" class="meadow-flower flower-2 noe-flower-art" aria-label="Tocar flor especial de Noelia" data-flower="🌸"><img src="lirio-noelia.svg" alt="" loading="lazy"></button>
+        <button type="button" class="meadow-flower flower-3 noe-flower-art" aria-label="Tocar flor especial de Noelia" data-flower="🌸"><img src="flor-blanca-noelia.svg" alt="" loading="lazy"></button>
+        <button type="button" class="meadow-flower flower-4 noe-flower-art" aria-label="Tocar flor especial de Noelia" data-flower="🌸"><img src="flor-violeta-noelia.svg" alt="" loading="lazy"></button>
+        <button type="button" class="meadow-flower flower-5 noe-flower-art" aria-label="Tocar flor especial de Noelia" data-flower="🌸"><img src="ramito-noelia.svg" alt="" loading="lazy"></button>
+        <img class="noe-meadow-bouquet" src="ramito-noelia.svg" alt="" aria-hidden="true"><div class="meadow-instruction">✿ Puedes tocar las flores y al osito ✿</div>
       </div>
       <div class="breath-dock wrap" id="respirar">
         <div class="breath-text"><span class="dock-icon">🫧</span><span><strong id="breathTitle">Un respiro contigo</strong><small id="breathHint">El osito puede respirar a tu ritmo: 4 segundos al inhalar y 6 al exhalar.</small></span></div>
@@ -210,7 +210,7 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
     </section>
 
     <section class="section meadow-garden wrap" id="jardin" aria-labelledby="gardenTitle">
-      <div class="garden-panel"><div class="garden-copy"><span class="section-kicker">UN JARDÍN SIN PRISAS</span><h2 id="gardenTitle">Haz crecer una <em>florecita.</em></h2><p>Por cada pequeño gesto, una hojita más. No hay cronómetro ni puntuaciones. Puedes volver cuando quieras.</p><button class="button button-primary" type="button" id="growFlower">Regar un poquito <span aria-hidden="true">💧</span></button><button class="inline-action" type="button" id="resetGarden">Volver a empezar ↻</button><p id="gardenMessage" class="garden-message" aria-live="polite">Hasta las flores crecen a su ritmo.</p></div><div class="garden-drawing" aria-hidden="true"><div class="garden-sun">☀</div><div class="growing-plant" id="growingPlant"><div class="stem"></div><div class="leaf leaf-left"></div><div class="leaf leaf-right"></div><div class="bloom"><span>✿</span></div></div><div class="garden-soil"></div><span class="garden-drop one">✦</span><span class="garden-drop two">✧</span><span class="garden-drop three">✦</span></div></div>
+      <div class="garden-panel"><div class="garden-copy"><span class="section-kicker">UN JARDÍN SIN PRISAS</span><h2 id="gardenTitle">Haz crecer una <em>florecita.</em></h2><p>Por cada pequeño gesto, una hojita más. No hay cronómetro ni puntuaciones. Puedes volver cuando quieras.</p><button class="button button-primary" type="button" id="growFlower">Regar un poquito <span aria-hidden="true">💧</span></button><button class="inline-action" type="button" id="resetGarden">Volver a empezar ↻</button><p id="gardenMessage" class="garden-message" aria-live="polite">Hasta las flores crecen a su ritmo.</p></div><div class="garden-drawing" aria-hidden="true"><div class="garden-sun">☀</div><div class="growing-plant" id="growingPlant"><div class="stem"></div><div class="leaf leaf-left"></div><div class="leaf leaf-right"></div><div class="bloom"><img src="ramito-noelia.svg" alt="Ramo de flores rosadas y blancas"></div></div><div class="garden-soil"></div><img class="noe-garden-bouquet" src="ramo-noelia.svg" alt="" aria-hidden="true"><span class="garden-drop one">✦</span><span class="garden-drop two">✧</span><span class="garden-drop three">✦</span></div></div>
     </section>
 
     <section class="section section-journal wrap" aria-labelledby="journalTitle"><div class="journal-grid"><div class="journal-intro"><span class="section-kicker">UN ESPACIO SOLO TUYO</span><h2 id="journalTitle">Si algo pesa, <em>puedes dejarlo aquí.</em></h2><p>No tienes que compartirlo con nadie. Puedes escribir una frase, guardarla en este navegador o dejar que se vaya. Tú eliges.</p><div class="privacy-caption">🔒 Tus notas solo se guardan en este dispositivo. Nadie más las recibe.</div></div><div class="journal-box"><label for="journalInput">Lo que hoy me gustaría soltar…</label><textarea id="journalInput" maxlength="1500" placeholder="No hace falta que tenga sentido ni que esté bien escrito."></textarea><div class="journal-controls"><button class="button button-primary" type="button" id="releaseNote">🍃 Soltarlo por hoy</button><button class="button button-outline" type="button" id="saveNote">Guardar para mí</button></div><p id="journalStatus" class="small-status" aria-live="polite">Este espacio no pide respuestas ni explicaciones.</p><div id="savedNotes" class="saved-notes"></div></div></div></section>
@@ -238,7 +238,7 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
     <div class="noe-extra-title"><small>UNA SORPRESA MÁS</small><h2 id="noe-extra-heading">Un sobrecito <em>de buenos deseos</em></h2><p>Abre este pequeño sobre cuando quieras. Dentro encontrarás una notita distinta para acompañarte.</p></div>
     <div class="noe-wish-card" id="noeWishCard"><button class="noe-envelope" id="noeEnvelopeButton" type="button" aria-label="Abrir sobre y descubrir una notita"><span class="noe-envelope-shadow"></span><span class="noe-envelope-back"></span><span class="noe-envelope-letter">Para Noe ♡</span><span class="noe-envelope-front"></span><span class="noe-envelope-lid"></span><span class="noe-envelope-seal">♡</span></button><div class="noe-envelope-instruction">Toca el sobre para abrirlo ✉️</div><p class="noe-wish-message" id="noeWishMessage" aria-live="polite">Hay unas palabritas suaves esperándote aquí.</p><button class="noe-wish-again" id="noeWishAgain" type="button">Otra notita bonita 🌷</button><p class="noe-wish-progress" id="noeWishProgress">Un pequeño detalle, sin prisas</p></div>
   </section>
-<section class="closing wrap" aria-label="Dedicatoria"><span class="closing-icon">🧸</span><h2>Y si hoy no fue tu mejor día…</h2><p>Está bien. Mañana será otra oportunidad. Por ahora, descansa un poquito, Noe. Ojalá este lugar te haya regalado una sonrisa, aunque sea pequeñita.</p><p class="signature">Con cariño, <span>Chris ♡</span></p></section>
+<section class="closing wrap" aria-label="Dedicatoria"><img class="noe-closing-flowers" src="ramito-noelia.svg" alt=""><span class="closing-icon">🧸</span><h2>Y si hoy no fue tu mejor día…</h2><p>Está bien. Mañana será otra oportunidad. Por ahora, descansa un poquito, Noe. Ojalá este lugar te haya regalado una sonrisa, aunque sea pequeñita.</p><p class="signature">Con cariño, <span>Chris ♡</span></p></section>
   </main>
   <footer class="footer">Hecho con calma, para que lo disfrutes a tu manera. 🌷 <span style="display:block;font-size:10px;opacity:.6;margin-top:8px">Cuídate mucho, eres una persona muy importante.</span></footer>
 
@@ -805,6 +805,6 @@ $('clearCloud').addEventListener('click', ()=>{ $('cloudInput').value=''; toast(
 
 renderJournal();
 </script>
-<script src="noe-magia.js?v=20261026-v1"></script>
+<script src="noe-magia.js?v=20261026-floral3"></script>
 </body>
 </html>
