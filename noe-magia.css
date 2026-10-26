@@ -1,0 +1,99 @@
+/* Noe — Pradera encantada | ampliación decorativa */
+:root{--noe-gold:#e9c68a;--noe-blush:#efb9b6;--noe-sky:#d7edf0;--noe-forest:#527d68}
+.noe-welcome{position:fixed;inset:0;z-index:150;display:grid;place-items:center;padding:20px;overflow-y:auto;overscroll-behavior:contain;background:radial-gradient(circle at 50% 25%,#fffcf4,#e5f1e8 55%,#cae6df);transition:opacity .65s ease,visibility .65s}
+.noe-welcome.noe-leaving{opacity:0;visibility:hidden;pointer-events:none}
+.noe-welcome-card{position:relative;isolation:isolate;width:min(550px,100%);padding:42px clamp(22px,6vw,55px);border:1px solid rgba(255,255,255,.95);border-radius:40px;background:rgba(255,254,248,.75);box-shadow:0 30px 100px rgba(59,102,74,.15);text-align:center;animation:noeCardRise .9s both}
+.noe-welcome-art{position:relative;height:134px;display:grid;place-items:center;margin-bottom:12px}
+.noe-welcome-art .noe-welcome-bear{font-size:6.4rem;filter:drop-shadow(0 12px 10px #43664428);animation:noeWelcomeBreathe 4.2s ease-in-out infinite}
+.noe-welcome-petal{position:absolute;font-size:2.15rem;animation:noeLeafFloat 5s ease-in-out infinite alternate}
+.noe-welcome-petal.a{left:16%;top:23%;animation-delay:-1.5s}
+.noe-welcome-petal.b{right:14%;bottom:8%;animation-delay:-2.5s}
+.noe-welcome-petal.c{right:21%;top:3%;font-size:1.6rem;animation-delay:-.5s}
+.noe-welcome-kicker{font-size:.74rem;text-transform:uppercase;letter-spacing:.2em;font-weight:800;color:#709179}
+.noe-welcome h2{font:normal clamp(2.35rem,6vw,3.6rem)/1.12 Georgia,serif;color:#426851;margin:17px 0}
+.noe-welcome h2 em{color:#a0788d;font-weight:normal}
+.noe-welcome p{max-width:420px;margin:0 auto 25px;line-height:1.85;color:#698170;font-size:.96rem}
+.noe-welcome-enter{border:0;border-radius:999px;padding:16px 27px;background:linear-gradient(115deg,#42765b,#6b9880);color:white;font-weight:800;box-shadow:0 12px 27px rgba(58,108,75,.23);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.noe-welcome-enter:hover{transform:translateY(-3px);box-shadow:0 15px 29px rgba(58,108,75,.28)}
+.noe-welcome-note{display:block;margin-top:14px;font-size:.78rem;color:#8c9e8b}
+.noe-welcome:before,.noe-welcome:after{content:"✿";position:absolute;color:#e6acaa;font-size:3rem;opacity:.55;animation:noeLeafFloat 6s infinite alternate}
+.noe-welcome:before{left:7%;top:19%}.noe-welcome:after{right:8%;bottom:13%;animation-delay:-3s}
+
+/* Más vida en la pradera sin sustituir el dibujo original */
+.hero{isolation:isolate}
+.hero:before{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background:radial-gradient(circle at 13% 30%,#fff9ef91 0 1px,transparent 3px) 0 0/77px 83px;opacity:.5}
+.meadow-stage{border:2px solid rgba(255,255,249,.8);box-shadow:0 20px 65px rgba(49,94,73,.18),inset 0 0 36px rgba(255,255,255,.26)}
+.noe-meadow-layer{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:5}
+.noe-flying-butterfly{position:absolute;font-size:clamp(24px,4vw,35px);filter:drop-shadow(0 3px 5px #5a806b40);animation:noeFlutter var(--flight,14s) ease-in-out infinite alternate;animation-delay:var(--offset,0s);opacity:.88}
+.noe-flying-butterfly.one{top:17%;left:5%;--flight:17s;--offset:-7s}
+.noe-flying-butterfly.two{top:49%;left:74%;--flight:21s;--offset:-13s;font-size:23px}
+.noe-flying-butterfly.three{top:23%;left:81%;--flight:15s;--offset:-4s;font-size:18px}
+.noe-floating-petal{position:absolute;display:block;top:-15%;color:#f6c4c4;opacity:.6;font-size:clamp(13px,2vw,20px);animation:noePetalFall var(--fall,14s) linear infinite;animation-delay:var(--lag,-2s)}
+.noe-dewdrop{position:absolute;width:8px;height:8px;border-radius:50%;background:radial-gradient(circle at 35% 25%,#fff,#ffe3ac);box-shadow:0 0 14px 4px rgba(255,246,181,.55);opacity:.9;animation:noeTwinkling 3.3s ease-in-out infinite alternate}
+.noe-dewdrop.one{left:11%;top:54%}.noe-dewdrop.two{left:83%;top:66%;animation-delay:-1.2s}.noe-dewdrop.three{left:65%;top:28%;animation-delay:-2.2s}
+.bear-button .noe-bear-crown,.bear-button .noe-bear-scarf,.bear-button .noe-bear-heart{transform-box:fill-box;transform-origin:center;transition:transform .3s ease}
+.bear-button .noe-bear-crown{animation:noeCrownFloat 5s ease-in-out infinite}
+.bear-button .noe-bear-heart{animation:noeHeartIdle 3.4s ease-in-out infinite}
+.bear-button.noe-hugging .noe-bear-heart{animation:noeHeartBeat .72s ease-in-out 3}
+.bear-button.noe-hugging .noe-bear-scarf{animation:noeScarfSway .9s ease-in-out 3}
+.bear-button.noe-hugging .noe-bear-crown{animation:noeCrownWiggle .9s ease-in-out 2}
+.meadow-instruction{backdrop-filter:blur(8px)}
+
+/* Añadimos un rincón interactivo, sin alterar las cartas o el diario */
+.noe-extra-garden{padding:78px 0 96px}
+.noe-extra-title{text-align:center;max-width:690px;margin:0 auto 30px}
+.noe-extra-title small{display:block;font-weight:800;font-size:11px;letter-spacing:.2em;color:#739c81}
+.noe-extra-title h2{font:normal clamp(2.4rem,5vw,3.8rem)/1.14 'DM Serif Display',Georgia,serif;color:#446951;letter-spacing:-.02em;margin:14px 0}
+.noe-extra-title p{margin:0;color:#788f7b;line-height:1.85}
+.noe-wish-card{position:relative;width:min(820px,100%);margin:0 auto;isolation:isolate;text-align:center;overflow:hidden;padding:36px 20px 44px;border-radius:36px;border:1px solid #fffef6;background:radial-gradient(ellipse at 50% 100%,rgba(233,248,221,.9),transparent 60%),linear-gradient(140deg,#fffefa,#f0f5e7);box-shadow:0 23px 67px rgba(54,95,65,.1)}
+.noe-wish-card:before{content:"✦";position:absolute;left:14%;top:13%;color:#e6c58e;font-size:1.6rem;animation:noeTwinkling 3s infinite alternate}
+.noe-wish-card:after{content:"✧";position:absolute;right:13%;top:15%;color:#e6c58e;font-size:2rem;animation:noeTwinkling 3s -1.2s infinite alternate}
+.noe-envelope{display:block;position:relative;width:220px;height:188px;border:0;background:transparent;margin:0 auto 7px;padding:0;cursor:pointer;touch-action:manipulation}
+.noe-envelope-shadow{position:absolute;left:21px;right:21px;bottom:8px;height:22px;border-radius:50%;filter:blur(7px);background:#5a806735}
+.noe-envelope-back{position:absolute;left:18px;right:18px;bottom:28px;height:119px;background:linear-gradient(140deg,#e6c6b3,#f8e6d5);border-radius:10px;box-shadow:0 12px 28px rgba(87,96,74,.18);border:1px solid #f5e7d5}
+.noe-envelope-letter{position:absolute;left:38px;right:38px;bottom:48px;height:108px;background:#fffef8;border:1px solid #e5e4d7;border-radius:7px;display:grid;place-items:center;font:normal 1.03rem Georgia,serif;color:#53765b;box-shadow:0 4px 9px #44654d21;transition:transform .9s cubic-bezier(.18,.82,.27,1);z-index:1}
+.noe-envelope-front{position:absolute;bottom:28px;left:18px;right:18px;height:117px;border-radius:0 0 10px 10px;background:linear-gradient(155deg,#fff6ed,#ead7c6);clip-path:polygon(0 0,50% 54%,100% 0,100% 100%,0 100%);z-index:3}
+.noe-envelope-lid{position:absolute;left:18px;right:18px;bottom:73px;height:74px;background:#e7c6b6;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;transition:transform .8s;z-index:4}
+.noe-envelope-seal{position:absolute;left:calc(50% - 15px);bottom:73px;z-index:5;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;color:white;background:#b78f8b;border:2px solid #eecbc2;box-shadow:0 4px 8px #83685d33;transition:opacity .3s}
+.noe-envelope.is-open .noe-envelope-lid{transform:rotateX(165deg);z-index:0}
+.noe-envelope.is-open .noe-envelope-letter{transform:translateY(-79px)}
+.noe-envelope.is-open .noe-envelope-seal{opacity:0}
+.noe-envelope:focus-visible{outline:3px solid #54846b;outline-offset:6px;border-radius:12px}
+.noe-envelope-instruction{font-size:.83rem;font-weight:700;color:#77917b}
+.noe-wish-message{max-width:550px;margin:25px auto 15px;min-height:54px;font:normal clamp(1.15rem,2vw,1.42rem)/1.65 Georgia,serif;color:#50755c}
+.noe-wish-again{border:1px solid #bfd9c5;border-radius:999px;background:#fffef9;padding:12px 18px;color:#4e795a;font-weight:800;cursor:pointer}
+.noe-wish-again:hover{background:#eef7ed}
+.noe-wish-progress{font-size:.78rem;color:#849b82;margin-top:14px}
+.noe-wish-card .noe-floating-blossom{position:absolute;pointer-events:none;font-size:1.5rem;z-index:8;animation:noeBlossomBurst 1.8s ease-out forwards}
+.noe-floral-divider{text-align:center;font-size:1rem;letter-spacing:.8em;color:#d9ad9e;padding:15px 0;opacity:.75}
+.letter-tile,.care-panel,.extras-panel,.sky-panel,.journal-box{transition:transform .3s ease,box-shadow .3s ease}
+.letter-tile:hover,.care-panel:hover,.extras-panel:hover,.sky-panel:hover{box-shadow:0 16px 35px rgba(58,93,68,.11)}
+.noe-wish-card,.garden-panel{border:1px solid rgba(255,255,255,.9)}
+@keyframes noeCardRise{from{opacity:0;transform:translateY(25px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes noeWelcomeBreathe{50%{transform:scale(1.08) rotate(-2deg)}}
+@keyframes noeLeafFloat{to{transform:translate(15px,-16px) rotate(18deg)}}
+@keyframes noeFlutter{to{transform:translate(22px,-50px) rotate(14deg)}}
+@keyframes noePetalFall{to{transform:translate(65px,630px) rotate(520deg);opacity:0}}
+@keyframes noeTwinkling{to{opacity:.25;transform:scale(.7)}}
+@keyframes noeCrownFloat{50%{transform:translateY(-2px) rotate(2deg)}}
+@keyframes noeHeartIdle{50%{transform:scale(1.09)}}
+@keyframes noeHeartBeat{0%,100%{transform:scale(1)}30%,70%{transform:scale(1.23)}45%,85%{transform:scale(1.04)}}
+@keyframes noeScarfSway{50%{transform:rotate(5deg)}}
+@keyframes noeCrownWiggle{50%{transform:rotate(-4deg)}}
+@keyframes noeBlossomBurst{to{opacity:0;transform:translate(var(--dx,20px),-135px) rotate(280deg) scale(1.25)}}
+@media(max-width:650px){
+ .noe-welcome-card{padding:27px 20px 33px;border-radius:28px}
+ .noe-welcome-art{height:115px}
+ .noe-welcome-art .noe-welcome-bear{font-size:5.1rem}
+ .noe-welcome h2{font-size:2.55rem}
+ .noe-extra-garden{padding:65px 0}
+ .noe-wish-card{padding:26px 12px 38px}
+ .meadow-stage{border-width:1px}
+ .noe-flying-butterfly.three{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+ .noe-welcome-card,.noe-welcome-art .noe-welcome-bear,.noe-welcome-petal,.noe-welcome:before,.noe-welcome:after,
+ .noe-floating-petal,.noe-flying-butterfly,.noe-dewdrop,.noe-wish-card:before,.noe-wish-card:after,
+ .bear-button .noe-bear-crown,.bear-button .noe-bear-heart{animation:none!important}
+ .noe-welcome,.noe-envelope-letter,.noe-envelope-lid{transition:none!important}
+}
