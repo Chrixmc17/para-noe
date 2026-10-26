@@ -216,3 +216,54 @@
 .noe-flower-art.flower-5{width:85px!important;height:107px!important}
 }
 @media(prefers-reduced-motion:reduce){.noe-floral-banner img,.noe-floral-parade img{animation:none!important}}
+
+
+/* Primavera 2026 — bienvenida clara, flores variadas y pradera exuberante */
+.noe-welcome-card{padding-top:30px!important}
+.noe-welcome-art{height:202px!important;margin:0 auto 22px!important;overflow:visible!important}
+.noe-welcome-bouquet{top:0!important;width:178px!important;height:187px!important;max-width:100%!important;z-index:2}
+.noe-welcome-kicker,.noe-welcome h2,.noe-welcome p,.noe-welcome-enter,.noe-welcome-note{position:relative;z-index:4}
+.noe-welcome-kicker{display:block;line-height:1.45;margin-top:5px}
+.noe-welcome .noe-welcome-bear{display:none!important}
+.noe-welcome-petal.a{left:5%;top:24%}.noe-welcome-petal.b{right:5%;top:28%}
+.noe-welcome-petal.c{right:10%;top:2%}
+.noe-welcome h2{margin-top:18px!important}
+.noe-global-rain{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:145;contain:layout style;opacity:.94}
+.noe-global-rain.flower-rain-behind{z-index:3}
+.noe-rain-flower{position:absolute;top:-14vh;left:var(--x);width:var(--size);height:var(--size);display:block;opacity:0;will-change:transform;animation:noeRainDrop var(--duration) linear var(--delay) infinite}
+.noe-rain-flower img{width:100%;height:100%;display:block;object-fit:contain;filter:drop-shadow(0 2px 3px #b783a52b);animation:noeRainSpin var(--spin) ease-in-out infinite alternate}
+.noe-rain-flower span{display:block;text-align:center;font-size:var(--size);line-height:1;filter:drop-shadow(0 2px 3px #b783a52b)}
+@keyframes noeRainDrop{0%{transform:translate3d(0,-15vh,0) rotate(-17deg);opacity:0}5%{opacity:var(--opacity)}90%{opacity:var(--opacity)}100%{transform:translate3d(var(--drift),125vh,0) rotate(64deg);opacity:0}}
+@keyframes noeRainSpin{to{transform:rotate(38deg) scale(.91)}}
+.noe-meadow-wildflowers{position:absolute;inset:0;z-index:5;pointer-events:none;overflow:hidden}
+.noe-meadow-wildflowers img{position:absolute;bottom:var(--bottom);left:var(--left);width:var(--width);height:auto;max-height:50%;object-fit:contain;transform-origin:center bottom;transform:translateX(-50%) rotate(var(--tilt));filter:drop-shadow(0 6px 4px #285f3b26);animation:noeWildSway var(--sway) ease-in-out infinite alternate;animation-delay:var(--offset)}
+.noe-meadow-wildflowers img.back{opacity:.83;z-index:0}
+.noe-meadow-wildflowers img.front{opacity:1;z-index:1}
+@keyframes noeWildSway{to{transform:translateX(-50%) rotate(calc(var(--tilt) + 5deg)) translateY(-4px)}}
+.noe-floral-parade img{min-width:0}
+.noe-floral-parade.noe-diverse img{width:clamp(72px,12vw,125px)}
+.noe-floral-parade.noe-diverse img:nth-child(3n){width:clamp(85px,14vw,145px)}
+.noe-floral-parade.noe-diverse{max-width:1120px;padding:0 18px;gap:clamp(2px,2vw,20px)}
+.noe-floral-banner img:last-child{animation-direction:alternate-reverse}
+.growing-plant::before{display:none!important}
+.noe-growing-rose[data-level="0"] .growth-seed{transform:translateY(45px)!important;transform-origin:center center!important}
+.noe-growing-rose[data-level="0"] .growth-sprout,.noe-growing-rose[data-level="0"] .growth-mature,.noe-growing-rose[data-level="0"] .growth-bud,.noe-growing-rose[data-level="0"] .growth-rose{opacity:0!important;visibility:hidden!important}
+.garden-drawing{isolation:isolate}
+.garden-soil{z-index:2}
+.noe-growing-rose{z-index:4!important}
+.noe-meadow-bouquet{z-index:6}
+@media(max-width:650px){
+ .noe-welcome{padding:11px}
+ .noe-welcome-card{padding:17px 20px 26px!important;border-radius:27px}
+ .noe-welcome-art{height:156px!important;margin-bottom:15px!important}
+ .noe-welcome-bouquet{top:-4px!important;width:145px!important;height:156px!important}
+ .noe-welcome h2{font-size:clamp(2.15rem,9.5vw,2.65rem);line-height:1.1}
+ .noe-welcome p{font-size:.86rem;margin-bottom:17px}
+ .noe-rain-flower{filter:none}
+ .noe-meadow-wildflowers img{width:calc(var(--width) * .63);max-height:31%}
+ .noe-floral-parade.noe-diverse{height:110px;gap:1px;padding:0 5px}
+ .noe-floral-parade.noe-diverse img{width:clamp(39px,12vw,72px);height:100px}
+ .noe-floral-parade.noe-diverse img:nth-child(3n){width:clamp(48px,15vw,88px)}
+}
+@media(max-height:650px){.noe-welcome{align-items:start}.noe-welcome-card{margin:auto}.noe-welcome-art{height:130px!important}.noe-welcome-bouquet{height:130px!important;width:124px!important}}
+@media(prefers-reduced-motion:reduce){.noe-rain-flower{display:none!important}.noe-meadow-wildflowers img{animation:none!important}}
