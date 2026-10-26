@@ -49,8 +49,19 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
 @media(prefers-reduced-motion:reduce){.ff-botanical .bot-flower,.ff-botanical .bot-tuft,.ff-drift-butterfly,.firefly{animation:none!important}}
 
 </style>
+<link rel="stylesheet" href="noe-magia.css?v=20261026-v1">
 </head>
 <body>
+<div class="noe-welcome" id="noeWelcome" role="dialog" aria-modal="true" aria-label="Bienvenida especial para Noe">
+ <div class="noe-welcome-card">
+  <div class="noe-welcome-art"><span class="noe-welcome-petal a">🌸</span><span class="noe-welcome-bear">🧸</span><span class="noe-welcome-petal b">🌷</span><span class="noe-welcome-petal c">✨</span></div>
+  <span class="noe-welcome-kicker">Un rincón hecho con cariño</span>
+  <h2>Bienvenida a tu <em>jardincito, Noe.</em></h2>
+  <p>Hay flores, un osito, unas cartitas y una melodía tranquila que preparé para acompañarte. Puedes recorrerlo a tu ritmo.</p>
+  <button class="noe-welcome-enter" id="noeWelcomeEnter" type="button">Entrar con música suave ♫</button>
+  <small class="noe-welcome-note">Puedes apagar la música cuando quieras.</small>
+ </div>
+</div>
   <a class="skip-link" href="#principal">Ir al contenido</a>
   <header class="header wrap" aria-label="Encabezado">
     <a class="brand" href="#inicio" aria-label="Volver al inicio"><span class="brand-bloom">✿</span><span>para Noe <small>un lugar bonito</small></span></a>
@@ -71,6 +82,7 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
 
     <div class="meadow-shell" id="pradera">
       <div class="meadow-stage" id="meadowStage" aria-label="Pradera animada, con flores, mariposas y un osito al que puedes tocar">
+        <div id="noeMeadowLayer" class="noe-meadow-layer" aria-hidden="true"></div>
         <svg class="landscape" viewBox="0 0 1200 560" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
           <defs>
             <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9e2f0"/><stop offset=".61" stop-color="#e8f5e8"/><stop offset="1" stop-color="#f7e8c6"/></linearGradient>
@@ -125,7 +137,9 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
                 <ellipse cx="210" cy="268" rx="46" ry="28" transform="rotate(10 210 268)" fill="#c18a67"/>
                 <ellipse cx="83" cy="268" rx="23" ry="14" transform="rotate(-10 83 268)" fill="#e8bb9c"/>
                 <ellipse cx="210" cy="268" rx="23" ry="14" transform="rotate(10 210 268)" fill="#e8bb9c"/>
-                <path d="M145 170q-10 -15 -20 1q-4 10 20 24q26 -14 20 -24q-11 -17 -20 -1" fill="#e6a8a7" opacity=".8"/>
+                <g class="noe-bear-heart"><path d="M145 170q-10 -15 -20 1q-4 10 20 24q26 -14 20 -24q-11 -17 -20 -1" fill="#dd8e9f" stroke="#bd7889" stroke-width="1.4"/><path d="M131 173q5 -7 11 -3" stroke="#ffedf0" stroke-width="3" stroke-linecap="round" fill="none"/></g>
+                <g class="noe-bear-scarf"><path d="M112 181Q145 192 180 181L173 199Q145 210 118 198Z" fill="#e4b0b6" opacity=".9"/><path d="M161 197L167 226L151 223L150 199Z" fill="#d994a1"/></g>
+                <g class="noe-bear-crown"><path d="M119 43Q145 28 172 42" stroke="#efd59c" stroke-width="5" stroke-linecap="round" fill="none"/><circle cx="119" cy="43" r="5" fill="#f4dca9"/><circle cx="145" cy="32" r="6" fill="#ffd59d"/><circle cx="172" cy="42" r="5" fill="#f4dca9"/></g>
               </g>
               <ellipse cx="145" cy="112" rx="86" ry="80" fill="url(#fur)"/>
               <ellipse cx="112" cy="119" rx="8.4" ry="11" fill="#49362e"/><ellipse cx="177" cy="119" rx="8.4" ry="11" fill="#49362e"/>
@@ -202,7 +216,12 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
       </div>
     </section>
 
-    <section class="closing wrap" aria-label="Dedicatoria"><span class="closing-icon">🧸</span><h2>Y si hoy no fue tu mejor día…</h2><p>Está bien. Mañana será otra oportunidad. Por ahora, descansa un poquito, Noe. Ojalá este lugar te haya regalado una sonrisa, aunque sea pequeñita.</p><p class="signature">Con cariño, <span>Chris ♡</span></p></section>
+    
+  <section class="noe-extra-garden wrap" id="notita-sorpresa" aria-labelledby="noe-extra-heading">
+    <div class="noe-extra-title"><small>UNA SORPRESA MÁS</small><h2 id="noe-extra-heading">Un sobrecito <em>de buenos deseos</em></h2><p>Abre este pequeño sobre cuando quieras. Dentro encontrarás una notita distinta para acompañarte.</p></div>
+    <div class="noe-wish-card" id="noeWishCard"><button class="noe-envelope" id="noeEnvelopeButton" type="button" aria-label="Abrir sobre y descubrir una notita"><span class="noe-envelope-shadow"></span><span class="noe-envelope-back"></span><span class="noe-envelope-letter">Para Noe ♡</span><span class="noe-envelope-front"></span><span class="noe-envelope-lid"></span><span class="noe-envelope-seal">♡</span></button><div class="noe-envelope-instruction">Toca el sobre para abrirlo ✉️</div><p class="noe-wish-message" id="noeWishMessage" aria-live="polite">Hay unas palabritas suaves esperándote aquí.</p><button class="noe-wish-again" id="noeWishAgain" type="button">Otra notita bonita 🌷</button><p class="noe-wish-progress" id="noeWishProgress">Un pequeño detalle, sin prisas</p></div>
+  </section>
+<section class="closing wrap" aria-label="Dedicatoria"><span class="closing-icon">🧸</span><h2>Y si hoy no fue tu mejor día…</h2><p>Está bien. Mañana será otra oportunidad. Por ahora, descansa un poquito, Noe. Ojalá este lugar te haya regalado una sonrisa, aunque sea pequeñita.</p><p class="signature">Con cariño, <span>Chris ♡</span></p></section>
   </main>
   <footer class="footer">Hecho con calma, para que lo disfrutes a tu manera. 🌷 <span style="display:block;font-size:10px;opacity:.6;margin-top:8px">Cuídate mucho, eres una persona muy importante.</span></footer>
 
@@ -769,5 +788,6 @@ $('clearCloud').addEventListener('click', ()=>{ $('cloudInput').value=''; toast(
 
 renderJournal();
 </script>
+<script src="noe-magia.js?v=20261026-v1"></script>
 </body>
 </html>
