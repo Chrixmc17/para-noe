@@ -637,7 +637,7 @@ $('groundReset').addEventListener('click',()=>{sensoryIndex=0;sensoryProgress=0;
 renderSensory();
 
 // Flor de cuatro toques, guardada en el mismo navegador.
-let flowerLevel = Math.min(4, Math.max(0, Number(getSaved('noe-flower-level-v1',0))||0));
+let flowerLevel = 0; // Cada visita comienza con una semillita, no con la flor ya crecida.
 const flowerLines=[
   'Hasta las flores crecen a su ritmo.',
   'Un poquito de agua… y un poquito de paciencia.',
