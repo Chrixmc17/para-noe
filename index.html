@@ -66,7 +66,7 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
 @media(prefers-reduced-motion:reduce){.ff-botanical .bot-flower,.ff-botanical .bot-tuft,.ff-drift-butterfly,.firefly{animation:none!important}}
 
 </style>
-<link rel="stylesheet" href="noe-magia.css?v=20261026-floral3">
+<link rel="stylesheet" href="noe-magia.css?v=20261026-single-rose4">
 </head>
 <body>
 <div class="noe-welcome" id="noeWelcome" role="dialog" aria-modal="true" aria-label="Bienvenida especial para Noe">
@@ -210,7 +210,93 @@ body.sunset #skyGradient stop:nth-child(1){stop-color:#a89bc7}body.sunset #skyGr
     </section>
 
     <section class="section meadow-garden wrap" id="jardin" aria-labelledby="gardenTitle">
-      <div class="garden-panel"><div class="garden-copy"><span class="section-kicker">UN JARDÍN SIN PRISAS</span><h2 id="gardenTitle">Haz crecer una <em>florecita.</em></h2><p>Por cada pequeño gesto, una hojita más. No hay cronómetro ni puntuaciones. Puedes volver cuando quieras.</p><button class="button button-primary" type="button" id="growFlower">Regar un poquito <span aria-hidden="true">💧</span></button><button class="inline-action" type="button" id="resetGarden">Volver a empezar ↻</button><p id="gardenMessage" class="garden-message" aria-live="polite">Hasta las flores crecen a su ritmo.</p></div><div class="garden-drawing" aria-hidden="true"><div class="garden-sun">☀</div><div class="growing-plant" id="growingPlant"><div class="stem"></div><div class="leaf leaf-left"></div><div class="leaf leaf-right"></div><div class="bloom"><img src="ramito-noelia.svg" alt="Ramo de flores rosadas y blancas"></div></div><div class="garden-soil"></div><img class="noe-garden-bouquet" src="ramo-noelia.svg" alt="" aria-hidden="true"><span class="garden-drop one">✦</span><span class="garden-drop two">✧</span><span class="garden-drop three">✦</span></div></div>
+      <div class="garden-panel">
+        <div class="garden-copy">
+          <span class="section-kicker">UN JARDÍN SIN PRISAS</span>
+          <h2 id="gardenTitle">Haz crecer una <em>rosa.</em></h2>
+          <p>Todo comienza con una semillita. Riégala poco a poco: primero un brote, después el tallo, un capullo y, por último, una sola rosa rosada.</p>
+          <button class="button button-primary" type="button" id="growFlower">Regar la semillita 💧</button>
+          <button class="inline-action" type="button" id="resetGarden">Volver a empezar ↻</button>
+          <p id="gardenMessage" class="garden-message" aria-live="polite">Aquí hay una semillita esperando su primer poquito de agua.</p>
+        </div>
+        <div class="garden-drawing" aria-label="Una rosa rosada que crece desde una semilla al regarla">
+          <div class="garden-sun" aria-hidden="true">☀</div>
+          <div class="growing-plant noe-growing-rose" id="growingPlant" data-level="0" role="img" aria-label="Una semilla bajo tierra">
+            <svg class="noe-rose-life" viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <linearGradient id="noeStem" x1="0" y1="0" x2="1" y2="0">
+                  <stop stop-color="#355a49"/><stop offset=".5" stop-color="#79ad7c"/><stop offset="1" stop-color="#426c50"/>
+                </linearGradient>
+                <linearGradient id="noeLeaf" x1="0" y1="0" x2="1" y2="1">
+                  <stop stop-color="#acd0a3"/><stop offset=".48" stop-color="#5d9b74"/><stop offset="1" stop-color="#37654d"/>
+                </linearGradient>
+                <radialGradient id="noePetal" cx=".28" cy=".17" r=".94">
+                  <stop stop-color="#fff1f1"/><stop offset=".32" stop-color="#f9b8ce"/><stop offset=".7" stop-color="#d877a4"/><stop offset="1" stop-color="#a94c79"/>
+                </radialGradient>
+                <radialGradient id="noePetalInner" cx=".29" cy=".12" r=".95">
+                  <stop stop-color="#fff1e9"/><stop offset=".46" stop-color="#f3a9bd"/><stop offset="1" stop-color="#bf628f"/>
+                </radialGradient>
+                <filter id="noeRoseShadow" x="-.25" y="-.3" width="1.5" height="1.7">
+                  <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#4b6556" flood-opacity=".17"/>
+                </filter>
+              </defs>
+              <g class="growth-seed">
+                <ellipse cx="148" cy="308" rx="13" ry="7" fill="#705d45" opacity=".32"/>
+                <path d="M137 303Q130 285 145 280Q161 279 162 297Q156 308 137 303Z" fill="#9a7955" stroke="#795a40" stroke-width="2"/>
+                <path d="M143 285Q146 294 158 299" fill="none" stroke="#d3ac7b" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+              <g class="growth-sprout">
+                <path d="M150 309Q147 293 150 273Q151 260 148 246" stroke="#69a275" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+                <path d="M149 276Q132 261 117 268Q127 288 149 280Z" fill="url(#noeLeaf)" stroke="#487e5b" stroke-width="1.3"/>
+                <path d="M151 270Q167 250 183 259Q174 278 151 273Z" fill="url(#noeLeaf)" stroke="#487e5b" stroke-width="1.3"/>
+              </g>
+              <g class="growth-mature">
+                <path d="M150 310Q143 277 151 239Q155 203 150 165Q148 147 151 135" stroke="url(#noeStem)" stroke-width="9" stroke-linecap="round" fill="none"/>
+                <path d="M152 266Q116 223 85 245Q104 278 152 267Z" fill="url(#noeLeaf)" stroke="#467959" stroke-width="2"/>
+                <path d="M149 229Q182 178 218 203Q205 243 149 231Z" fill="url(#noeLeaf)" stroke="#467959" stroke-width="2"/>
+                <path d="M150 201Q131 168 102 178Q110 206 150 204Z" fill="url(#noeLeaf)" stroke="#467959" stroke-width="1.5"/>
+                <path d="M152 265Q117 250 96 248M151 229Q185 214 211 206M148 202Q120 187 108 181" stroke="#c9dfb6" stroke-width="1.8" opacity=".7" fill="none"/>
+              </g>
+              <g class="growth-bud" filter="url(#noeRoseShadow)">
+                <g transform="translate(150 122)">
+                  <path d="M-24 12Q-34 -17 -16 -41Q2 -59 19 -36Q34 -16 24 13Q1 29 -24 12Z" fill="url(#noePetal)" stroke="#b96691" stroke-width="2"/>
+                  <path d="M-20 -3Q-4 -26 19 -8" fill="none" stroke="#ffe8ee" stroke-width="4" opacity=".82" stroke-linecap="round"/>
+                  <path d="M-26 11Q-14 24 0 27Q13 22 26 11L12 34L-13 33Z" fill="#5b8f62"/>
+                </g>
+              </g>
+              <g class="growth-rose" filter="url(#noeRoseShadow)">
+                <g transform="translate(150 116)">
+                  <path d="M0 43L-22 24L-36 33L-22 48L0 54L22 48L36 33L22 24Z" fill="#54865f"/>
+                  <g fill="url(#noePetal)" stroke="#bb6793" stroke-width="1.7">
+                    <path d="M-5 18Q-61 9 -55 -27Q-47 -55 -17 -46Q-2 -30 -5 18Z"/>
+                    <path d="M4 20Q61 9 56 -27Q48 -56 18 -46Q-1 -28 4 20Z"/>
+                    <path d="M-25 25Q-55 29 -61 -2Q-57 -29 -33 -25Q-17 -8 -25 25Z"/>
+                    <path d="M25 24Q56 29 61 -2Q57 -30 33 -25Q18 -7 25 24Z"/>
+                    <path d="M-36 8Q-57 -36 -18 -58Q10 -67 8 -23Q-6 -2 -36 8Z"/>
+                    <path d="M37 8Q58 -36 19 -58Q-9 -67 -8 -23Q7 -1 37 8Z"/>
+                    <path d="M-37 21Q-18 -7 2 7Q22 -8 37 22Q31 46 4 47Q-25 44 -37 21Z"/>
+                  </g>
+                  <g fill="url(#noePetalInner)" stroke="#c37096" stroke-width="1.4">
+                    <path d="M-23 -8Q-30 -43 -4 -49Q21 -45 15 -12Q-2 6 -23 -8Z"/>
+                    <path d="M19 -9Q37 -35 17 -41Q-4 -41 -9 -15Q-1 -1 19 -9Z"/>
+                    <path d="M-21 14Q-16 -18 8 -19Q29 -17 22 12Q11 33 -10 27Q-20 24 -21 14Z"/>
+                    <path d="M-9 9Q-10 -12 7 -13Q22 -13 17 7Q14 20 0 18Q-10 18 -9 9Z"/>
+                  </g>
+                  <path d="M-8 1Q-10 -14 6 -14Q20 -12 15 2Q6 12 -4 8Q-10 5 -5 -2Q2 -8 8 -2" stroke="#985074" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                  <path d="M-26 -42Q-19 -52 -7 -50 M27 -43Q19 -53 10 -49" stroke="#ffe6ea" stroke-width="3" opacity=".9" fill="none" stroke-linecap="round"/>
+                </g>
+              </g>
+              <g class="growth-glimmer" fill="#fff5d2">
+                <path d="M66 115l4 11 11 4-11 4-4 11-4-11-11-4 11-4Z"/>
+                <path d="M231 83l3 9 9 3-9 3-3 9-3-9-9-3 9-3Z"/>
+                <circle cx="242" cy="156" r="3.5"/>
+              </g>
+            </svg>
+          </div>
+          <div class="garden-soil"></div>
+          <span class="garden-drop one">✦</span><span class="garden-drop two">✧</span><span class="garden-drop three">✦</span>
+        </div>
+      </div>
     </section>
 
     <section class="section section-journal wrap" aria-labelledby="journalTitle"><div class="journal-grid"><div class="journal-intro"><span class="section-kicker">UN ESPACIO SOLO TUYO</span><h2 id="journalTitle">Si algo pesa, <em>puedes dejarlo aquí.</em></h2><p>No tienes que compartirlo con nadie. Puedes escribir una frase, guardarla en este navegador o dejar que se vaya. Tú eliges.</p><div class="privacy-caption">🔒 Tus notas solo se guardan en este dispositivo. Nadie más las recibe.</div></div><div class="journal-box"><label for="journalInput">Lo que hoy me gustaría soltar…</label><textarea id="journalInput" maxlength="1500" placeholder="No hace falta que tenga sentido ni que esté bien escrito."></textarea><div class="journal-controls"><button class="button button-primary" type="button" id="releaseNote">🍃 Soltarlo por hoy</button><button class="button button-outline" type="button" id="saveNote">Guardar para mí</button></div><p id="journalStatus" class="small-status" aria-live="polite">Este espacio no pide respuestas ni explicaciones.</p><div id="savedNotes" class="saved-notes"></div></div></div></section>
@@ -636,23 +722,35 @@ $('groundNext').addEventListener('click',()=>{
 $('groundReset').addEventListener('click',()=>{sensoryIndex=0;sensoryProgress=0;renderSensory();});
 renderSensory();
 
-// Flor de cuatro toques, guardada en el mismo navegador.
-let flowerLevel = 0; // Cada visita comienza con una semillita, no con la flor ya crecida.
+// Una sola rosa nace de una semilla: semilla → brote → tallo → capullo → flor.
+let flowerLevel = 0;
 const flowerLines=[
-  'Hasta las flores crecen a su ritmo.',
-  'Un poquito de agua… y un poquito de paciencia.',
-  'Mira, ya salió una hoja. Así empiezan muchas cosas buenas.',
-  'Una segunda hojita. No hace falta apresurar nada.',
-  '¡Floreció! Qué lindo lo que puede pasar cuando nos damos tiempo. 🌷'
+  'Aquí hay una semillita esperando su primer poquito de agua. 🌱',
+  '¡Ya asomó un brote pequeñito! Todo empieza así.',
+  'Le creció un tallo con hojitas. Un poquito más de paciencia.',
+  '¡Mira, apareció un capullo rosa! Pronto abrirá sus pétalos.',
+  '¡Floreció una rosa rosada! 🌹 De una sola semilla nació una sola flor.'
 ];
-function drawFlower(){ $('growingPlant').dataset.level=String(flowerLevel);$('gardenMessage').textContent=flowerLines[flowerLevel];$('growFlower').textContent=flowerLevel===4?'Regar otra vez 💧':'Regar un poquito 💧'; }
+const flowerButtons=[
+  'Regar la semillita 💧',
+  'Seguir regando 💧',
+  'Ayudarla a crecer 💧',
+  'Ayudar a abrir el capullo 💧',
+  'Volver a sembrar 🌱'
+];
+function drawFlower(){
+  const plant=$('growingPlant');
+  plant.dataset.level=String(flowerLevel);
+  plant.setAttribute('aria-label', ['Una semilla bajo tierra','Un brote recién nacido','Una planta con hojas','Un capullo rosa','Una rosa rosada completamente abierta'][flowerLevel]);
+  $('gardenMessage').textContent=flowerLines[flowerLevel];
+  $('growFlower').textContent=flowerButtons[flowerLevel];
+}
 $('growFlower').addEventListener('click',()=>{
   flowerLevel=flowerLevel===4?0:flowerLevel+1;
-  setSaved('noe-flower-level-v1',flowerLevel);
   drawFlower();
-  if(flowerLevel===4) toast('Tu florecita creció. 🌷');
+  if(flowerLevel===4)toast('¡Tu rosita floreció! 🌹');
 });
-$('resetGarden').addEventListener('click',()=>{flowerLevel=0;setSaved('noe-flower-level-v1',0);drawFlower();});
+$('resetGarden').addEventListener('click',()=>{flowerLevel=0;drawFlower();});
 drawFlower();
 
 // Diario local: evita enviar texto a servidores. No hacemos analítica de entradas.
