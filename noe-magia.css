@@ -172,3 +172,47 @@
 @keyframes noeRoseGlimmer{to{opacity:.25}}
 @media(max-width:650px){.garden-drawing .noe-growing-rose{width:min(275px,94%)!important;height:315px!important;bottom:44px!important}}
 @media(prefers-reduced-motion:reduce){.noe-growing-rose .growth-seed,.noe-growing-rose .growth-sprout,.noe-growing-rose .growth-mature,.noe-growing-rose .growth-bud,.noe-growing-rose .growth-rose,.noe-growing-rose .growth-glimmer{animation:none!important;transition:none!important}}
+
+
+/* Un auténtico jardín de Noelia: flores grandes y agrupaciones en cada sección */
+.noe-welcome-bouquet{width:210px!important;height:220px!important;object-fit:contain!important;max-width:none!important;filter:drop-shadow(0 12px 13px #957a8c42)!important}
+.noe-meadow-bouquet{width:190px!important;height:200px!important;opacity:.98!important;filter:drop-shadow(0 10px 12px #5e80654b)!important}
+.noe-closing-flowers{width:min(345px,78vw)!important;height:265px!important;object-fit:contain!important;filter:drop-shadow(0 13px 16px #8a678332)!important}
+.noe-flower-art{width:86px!important;height:116px!important}
+.noe-flower-art img{width:100%!important;height:100%!important;object-fit:contain!important;filter:drop-shadow(0 7px 8px #5c785c38)}
+.noe-flower-art.flower-5{width:135px!important;height:155px!important}
+.noe-floral-banner{position:relative;display:flex;align-items:center;justify-content:space-between;overflow:hidden;height:190px;margin-top:10px;padding:0 max(12px,8vw);background:linear-gradient(90deg,#f2f8eb,#fffdf7,#f6eff5)}
+.noe-floral-banner img{width:220px;height:240px;object-fit:contain;filter:drop-shadow(0 8px 12px #90788429);animation:noeBouquetFloat 7s ease-in-out infinite alternate}
+.noe-floral-banner img:last-child{transform:scaleX(-1);animation-delay:-3s}
+.noe-floral-banner span{position:relative;z-index:1;text-align:center;color:#68846e;font:italic clamp(1rem,2vw,1.35rem)/1.5 Georgia,serif;letter-spacing:.03em}
+.noe-floral-corner-decoration{position:relative;max-width:1300px;margin:-20px auto -80px;display:flex;justify-content:space-between;height:250px;pointer-events:none;z-index:2}
+.noe-floral-corner-decoration img{width:230px;max-width:25%;height:250px;object-fit:contain;filter:drop-shadow(0 9px 10px #6d816a27);transform:rotate(-9deg)}
+.noe-floral-corner-decoration img:nth-child(2){transform:scaleX(-1) rotate(-9deg)}
+.noe-floral-second{margin-top:-30px;opacity:.88}
+.noe-floral-parade{display:flex;justify-content:space-evenly;align-items:end;gap:9px;max-width:1000px;margin:-10px auto -35px;height:160px;overflow:hidden;pointer-events:none}
+.noe-floral-parade img{object-fit:contain;width:130px;height:150px;filter:drop-shadow(0 7px 8px #6a866833);transform-origin:center bottom;animation:noeFlowersAlive 5s ease-in-out infinite alternate}
+.noe-floral-parade img:nth-child(2n){animation-delay:-2s}
+.noe-floral-parade img:nth-child(4){width:165px}
+.noe-floral-parade-small{margin:5px auto -25px;height:140px}
+.noe-floral-closing-bouquet{max-width:1000px;margin:0 auto -90px;display:flex;justify-content:space-between;pointer-events:none;height:220px;opacity:.94}
+.noe-floral-closing-bouquet img{width:245px;height:260px;max-width:29%;object-fit:contain;transform:rotate(-12deg)}
+.noe-floral-closing-bouquet img:last-child{transform:scaleX(-1) rotate(-12deg)}
+@keyframes noeFlowersAlive{to{transform:rotate(6deg) translateY(-6px)}}
+@media(max-width:650px){
+.noe-welcome-bouquet{width:162px!important;height:175px!important}
+.noe-meadow-bouquet{width:125px!important;height:140px!important}
+.noe-floral-banner{height:120px;padding:0 5px}
+.noe-floral-banner img{width:100px;height:120px}
+.noe-floral-banner span{font-size:.78rem;max-width:45%}
+.noe-floral-corner-decoration{height:125px;margin:-10px auto -25px}
+.noe-floral-corner-decoration img{height:145px;width:115px;max-width:30%}
+.noe-floral-parade{height:98px;margin:0 auto -15px;gap:0}
+.noe-floral-parade img{width:70px;height:100px}
+.noe-floral-parade img:nth-child(4){width:96px}
+.noe-floral-closing-bouquet{height:120px;margin:0 auto -48px}
+.noe-floral-closing-bouquet img{width:125px;height:145px}
+.noe-closing-flowers{width:min(285px,85vw)!important;height:225px!important}
+.noe-flower-art{width:64px!important;height:92px!important}
+.noe-flower-art.flower-5{width:85px!important;height:107px!important}
+}
+@media(prefers-reduced-motion:reduce){.noe-floral-banner img,.noe-floral-parade img{animation:none!important}}
