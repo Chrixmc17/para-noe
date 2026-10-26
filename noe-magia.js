@@ -49,6 +49,103 @@
     }
   }
 
+
+  // Lluvia de flores por TODA la página, no únicamente dentro de la pradera.
+  // Se mantiene delicada para que se puedan leer las cartas y pulsar botones.
+  const floralFiles=[
+    "rosa-noelia.svg","lirio-noelia.svg","flor-blanca-noelia.svg",
+    "flor-violeta-noelia.svg","margaritas-noelia.svg","tulipanes-noelia.svg",
+    "lavanda-noelia.svg","camelias-noelia.svg"
+  ];
+  if(!reduce){
+    const rain=document.createElement("div");
+    rain.className="noe-global-rain";
+    rain.setAttribute("aria-hidden","true");
+    document.body.appendChild(rain);
+    const count=window.innerWidth<600?19:34;
+    for(let i=0;i<count;i++){
+      const item=document.createElement("span");
+      item.className="noe-rain-flower";
+      const f=(i*7+Math.floor(i/4))%floralFiles.length;
+      if(i%5===0){
+        const petal=document.createElement("span");
+        petal.textContent=["🌸","🌷","🌼","❀","✿"][i%5];
+        item.appendChild(petal);
+      }else{
+        const picture=document.createElement("img");
+        picture.src=floralFiles[f];
+        picture.alt="";picture.decoding="async";
+        item.appendChild(picture);
+      }
+      item.style.setProperty("--x",((i*37.71)%99).toFixed(1)+"%");
+      item.style.setProperty("--size",(window.innerWidth<600?12+i%4*4:15+i%5*5)+"px");
+      item.style.setProperty("--duration",(16+(i*7)%15)+"s");
+      item.style.setProperty("--delay",(-i*2.23)+"s");
+      item.style.setProperty("--spin",(4+i%5)+"s");
+      item.style.setProperty("--drift",((i%2?-1:1)*(35+i%7*15))+"px");
+      item.style.setProperty("--opacity",(.34+(i%4)*.065).toFixed(2));
+      rain.appendChild(item);
+    }
+    const syncRain=()=>{
+      const welcomeVisible=overlay&&!overlay.hidden&&!overlay.classList.contains("noe-leaving");
+      rain.classList.toggle("flower-rain-behind",!welcomeVisible);
+    };
+    syncRain();
+    if(enter)enter.addEventListener("click",()=>rain.classList.add("flower-rain-behind"));
+  }
+
+  // Muchas flores distintas sobre el césped, sin cubrir la cara del osito.
+  const meadow=byId("meadowStage");
+  if(meadow){
+    const field=document.createElement("div");
+    field.className="noe-meadow-wildflowers";
+    field.setAttribute("aria-hidden","true");
+    const spots=[
+      [3,2,82,0],[9,10,66,-8],[16,0,80,7],[23,9,69,-9],[29,2,59,7],
+      [37,0,55,-6],[45,7,48,4],[53,0,54,-8],[62,9,60,8],
+      [69,0,67,-5],[77,8,72,6],[84,0,68,-6],[92,11,85,4],[98,1,73,-7],
+      [6,26,48,9],[17,25,47,-8],[29,24,46,4],[72,25,43,-3],[82,23,49,8],[94,28,53,-8],
+      [12,2,48,5],[35,16,40,-5],[57,15,38,6],[87,4,43,-7]
+    ];
+    spots.forEach(([x,bottom,width,tilt],i)=>{
+      const image=document.createElement("img");
+      image.src=floralFiles[(i*3+Math.floor(i/4))%floralFiles.length];
+      image.alt="";
+      image.loading="lazy";
+      image.className=i%4===0?"back":"front";
+      image.style.setProperty("--left",x+"%");
+      image.style.setProperty("--bottom",bottom+"%");
+      image.style.setProperty("--width",width+"px");
+      image.style.setProperty("--tilt",tilt+"deg");
+      image.style.setProperty("--sway",(3.4+i%5*.85)+"s");
+      image.style.setProperty("--offset",(-i*.37)+"s");
+      field.appendChild(image);
+    });
+    const teddy=byId("bearHug");
+    // Detrás del osito y delante del paisaje, manteniendo los botones interactivos.
+    if(teddy&&teddy.closest(".teddy-area"))meadow.insertBefore(field,teddy.closest(".teddy-area"));
+    else meadow.appendChild(field);
+  }
+
+  // Sustituir las repeticiones de ramos por ocho ilustraciones botánicas distintas.
+  document.querySelectorAll(".noe-floral-parade").forEach((parade,j)=>{
+    parade.classList.add("noe-diverse");
+    parade.replaceChildren();
+    const order=j%2?[5,0,6,2,7,3,4,1]:[4,1,6,0,7,2,5,3];
+    order.forEach((which,i)=>{
+      const picture=document.createElement("img");
+      picture.src=floralFiles[which];picture.alt="";
+      picture.loading="lazy";
+      picture.style.animationDelay=(-i*.72)+"s";
+      parade.appendChild(picture);
+    });
+  });
+  document.querySelectorAll(".noe-floral-banner img, .noe-floral-closing-bouquet img, .noe-floral-corner-decoration img").forEach((img,i)=>{
+    if(i%3===0)img.src="camelias-noelia.svg";
+    else if(i%3===1)img.src="tulipanes-noelia.svg";
+    else img.src="margaritas-noelia.svg";
+  });
+
   const bear=byId("bearHug");
   if(bear){
     bear.addEventListener("click",()=>{
